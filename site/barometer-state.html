@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CBHSQ Prototype | Barometers</title>
+    <meta charset="utf-8">
+    <meta name="viewport" condition="initial-scale=1">
+    <script src="https://use.fontawesome.com/330eaf7969.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"> </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="stuff/foo.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+    <link rel="stylesheet" href="stuff/styles.css">
+  </head>
+  <body class="barometers">
+    <div class="smheader">
+      <div class="tophat">
+        <p>The Substance Abuse and Mental Health Services Administration</p>
+      </div>
+      <div class="topmenu">
+        <div class="menu"><i aria-hidden="true" class="fa fa-bars fa-3x"></i>
+          <p>Menu</p>
+        </div>
+        <div class="img"><a href="index.html"><img src="https://www.samhsa.gov/sites/all/themes/omega_samhsa/images/main_logo.png"></a></div>
+        <div class="search"><i aria-hidden="true" class="fa fa-search fa-3x"> </i>
+          <p>Search</p>
+        </div>
+      </div>
+    </div>
+    <div class="header">
+      <div class="tophat"></div>
+      <div class="minimenu">
+        <ul>
+          <li> <a href="index.html">Home</a></li>
+          <li> <a href="index-inprocess.html">Newsroom</a></li>
+          <li>Site Map</li>
+          <li>Contact Us</li>
+        </ul>
+      </div>
+      <div class="main">
+        <div class="logo"><a href="index.html"><img src="https://www.samhsa.gov/sites/all/themes/omega_samhsa/images/main_logo.png"></a></div>
+        <div class="search">
+          <input type="text" value="Search SAMHSA.gov"><a class="btn">Search</a>
+        </div>
+      </div>
+      <div class="social">
+        <p>Connect with SAMHSA:<i aria-hidden="true" class="fa fa-facebook fa-lg"> </i><i aria-hidden="true" class="fa fa-twitter fa-lg"> </i><i aria-hidden="true" class="fa fa-youtube fa-lg"></i><i aria-hidden="true" class="fa fa-comment fa-lg"></i></p>
+      </div>
+      <div class="menu">
+        <ul>
+          <li>Find Help &amp; Treatment</li>
+          <li>Topics</li>
+          <li>Programs &amp; Compaigns</li>
+          <li>Grants</li>
+          <li>Data</li>
+          <li>About Us</li>
+          <li>Publications</li>
+        </ul>
+      </div>
+    </div>
+    <div class="wrapfoursquare">
+      <div class="article-head">
+        <div class="report-header">
+          <p class="kicker">CBHSQ Barometers</p>
+          <h1>2015 Washington Behavioral Health Barometers</h1>
+        </div>
+      </div>
+      <div class="sidebar1">
+        <h3>Downloads</h3>
+        <div class="downloads">
+          <div class="downloads-item downloads-pdf"><a onclick="toggle_visibility('downloads-reports');"><img src="stuff/img/pdf.png" class="icon"><span>Report PDF</span></a></div>
+          <div id="downloads-reports" class="modal">
+            <div class="modal-content">
+              <p><i> This link would actually open the PDF in a new window</i></p>
+              <p><a onclick="toggle_visibility('downloads-reports');" class="close">Close</a></p>
+            </div>
+          </div>
+          <div class="downloads-item downloads-figures"><a onclick="toggle_visibility('downloads-figures');"><img src="stuff/img/cube.png" class="icon"><span>Figures</span></a></div>
+          <div id="downloads-figures" class="modal">
+            <div class="modal-content">
+              <h4>Please choose an item for download</h4>
+              <ul> 
+                <li><img src="stuff/img/zip.png" class="icon"><span>All Tables</span></li>
+                <li><img src="stuff/img/jpg.png" class="icon"><span>Figure 2 Map & Table</span></li>
+                <li> <img src="stuff/img/zip.png" class="icon"><span>Figure 3 Map & Table</span></li>
+                <li><img src="stuff/img/xls.png" class="icon"><span>XLS</span></li>
+                <p></p><a onclick="toggle_visibility('downloads-figures');" class="close">Close</a>
+              </ul>
+            </div>
+          </div>
+          <div class="downloads-item downloads-citations"><a onclick="toggle_visibility('downloads-citations');"><img src="stuff/img/quote.png" class="icon"><span>Cite this Report</span></a></div>
+          <div id="downloads-citations" class="modal">
+            <div class="modal-content">
+              <p>Select then copy text below to cite this report</p>
+              <div class="copybox">Hughes, A., Williams, M.R., Lipari, R.N. and Van Horn, <i>S. State estimates of past year cocaine use among young adults: 2014 and 2015.</i> The CBHSQ Report: December 20, 2016. Center for Behavioral Health Statistics and Quality, Substance Abuse and Mental Health Services Administration, Rockville, MD.</div>
+              <p>APA format</p>
+              <p><a onclick="toggle_visibility('downloads-citations');" class="close">Close</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="article">
+        <h2>Description</h2>
+        <p>The Substance Abuse and Mental Health Services Administration (SAMHSA), an operating division within the U.S. Department of Health and Human Services (HHS), is charged with reducing the impact of substance abuse and mental illness on America’s communities. SAMHSA is pursuing this mission at a time of signi cant change. Health care reform has been enacted, bringing sweeping changes to how the United States delivers, pays for, and monitors health care. Simultaneously, state budgets are shrinking, and  scal restraint is a top priority.</p>
+        <p><a class="btn">Download PDF</a></p>
+        <div class="otherreports">
+          <h3>View other Barometers for 2015</h3>
+          <h4> <a onclick="toggle_visibility('national');">[-]</a>National </h4>
+          <div id="national" class="collapse">
+            <p><a>2015 National Behavioral Barometers</a></p>
+          </div>
+          <h4> <a onclick="toggle_visibility('state');">[-]</a>By State </h4>
+          <div id="state" class="collapse">
+            <p><a>Alabama </a></p>
+            <p><a>Alaska </a></p>
+            <p><a>Arizona </a></p>
+            <p><a>Arkansas </a></p>
+            <p><a>California </a></p>
+            <p><a>Colorado </a></p>
+            <p><a>Connecticut </a></p>
+            <p><a>Delaware </a></p>
+            <p><a>Florida </a></p>
+            <p><a>Georgia </a></p>
+            <p><a>Hawaii </a></p>
+            <p><a>Idaho </a></p>
+            <p><a>Illinois </a></p>
+            <p><a>Indiana </a></p>
+            <p><a>Iowa </a></p>
+            <p><a>Kansas </a></p>
+            <p><a>Kentucky </a></p>
+            <p><a>Louisiana </a></p>
+            <p><a>Maine </a></p>
+            <p><a>Maryland </a></p>
+            <p><a>Massachusetts </a></p>
+            <p><a>Michigan </a></p>
+            <p><a>Minnesota </a></p>
+            <p><a>Mississippi </a></p>
+            <p><a>Missouri </a></p>
+            <p><a>Montana </a></p>
+            <p><a>Nebraska </a></p>
+            <p><a>Nevada </a></p>
+            <p><a>New Hampshire </a></p>
+            <p><a>New Jersey </a></p>
+            <p><a>New Mexico </a></p>
+            <p><a>New York </a></p>
+            <p><a>North Carolina </a></p>
+            <p><a>North Dakota </a></p>
+            <p><a>Ohio </a></p>
+            <p><a>Oklahoma </a></p>
+            <p><a>Oregon </a></p>
+            <p><a>Pennsylvania </a></p>
+            <p><a>Rhode Island </a></p>
+            <p><a>South Carolina </a></p>
+            <p><a>South Dakota </a></p>
+            <p><a>Tennessee </a></p>
+            <p><a>Texas </a></p>
+            <p><a>Utah </a></p>
+            <p><a>Vermont </a></p>
+            <p><a>Virginia </a></p>
+            <p><a>Washington </a></p>
+            <p><a>West Virginia </a></p>
+            <p><a>Wisconsin </a></p>
+            <p><a>Wyoming</a></p>
+          </div>
+          <h4> <a onclick="toggle_visibility('region');">[-]</a>By Region</h4>
+          <div id="region" class="collapse">
+            <p><a>Health and Human Services  Region 1 - Boston </a><br> serves state and local organizations in Connecticut, Maine, Massachusetts, New Hampshire, Rhode Island, and Vermont.</p>
+            <p><a>Health and Human Services  Region 2 - New York  </a><br>serves state and local organizations in New Jersey, New York, Puerto Rico, and the Virgin Islands.</p>
+            <p><a>Health and Human Services  Region 3 - Philadelphia  </a><br>serves state and local organizations in Delaware, District of Columbia, Maryland, Pennsylvania, Virginia, and West Virginia.</p>
+            <p><a>Health and Human Services  Region 4 - Atlanta  </a><br>serves state and local organizations in Alabama, Florida, Georgia, Kentucky, Mississippi, North Carolina, South Carolina, and Tennessee.</p>
+            <p><a>Health and Human Services  Region 5 - Chicago  </a><br>serves state and local organizations in Illinois, Indiana, Michigan, Minnesota, Ohio, and Wisconsin.</p>
+            <p><a>Health and Human Services  Region 6 - Dallas  </a><br>serves state and local organizations in Arkansas, Louisiana, New Mexico, Oklahoma, and Texas.</p>
+            <p><a>Health and Human Services  Region 7 - Kansas City  </a><br>serves state and local organizations in Iowa, Kansas, Missouri, and Nebraska.</p>
+            <p><a>Health and Human Services  Region 8 - Denver  </a><br>serves state and local organizations in Colorado, Montana, North Dakota, South Dakota, Utah, and Wyoming.</p>
+            <p><a>Health and Human Services  Region 9 - San Francisco  </a><br>serves state and local organizations in Arizona, California, Hawaii, Nevada, American Samoa, Commonwealth of the Northern Mariana Islands, Federated States of Micronesia, Guam, Marshall Islands, and Republic of Palau.</p>
+            <p>     <a>Health and Human Services  Region 10 - Seattle  </a><br>serves state and local organizations in Alaska, Idaho, Oregon, and Washington.</p>
+          </div>
+        </div>
+      </div>
+      <div class="sidebar2">
+        <h3>View  Collection Years</h3>
+        <ul>
+          <li> <a>2014</a></li>
+          <li> <a>2013</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="slim-footer">
+      <div class="top">
+        <div class="subnav">
+          <ul>
+            <li>Home </li>
+            <li>Reports and Data Tables</li>
+            <li>How We Collect </li>
+            <li>Our Evaluation Methods</li>
+            <li>Our Data Integrity</li>
+            <li>FAQs </li>
+            <li>About CBHSQ</li>
+          </ul>
+        </div>
+        <div class="SAMHDA"><img src="http://placehold.it/100x75">
+          <p>The Substance Abuse and Mental Health Data Archive (SAMHDA) provides the files and information necessary to replicate CBHSQ's analysis <a>View our Data Archive</a></p>
+        </div>
+      </div>
+    </div>
+    <div class="footer">Footer Here</div>
+  </body>
+</html>

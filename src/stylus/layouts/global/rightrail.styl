@@ -1,0 +1,21 @@
+.wraprail
+  max-width: 1300px
+  margin: auto
+  padding: 1.25rem
+  display:flex
+  @media(max-width: $md)
+    flex-direction: column
+  .article
+    flex: 3
+    padding-right: 1.25rem
+    @media(max-width: $md)
+      padding: 0
+  .sidebar
+    flex: 1
+    @media(max-width: $md)
+      padding-margin: 20px
+
+.leftrail
+  .wraprail
+    @media(min-width: $lg)
+      flex-direction: row-reverse

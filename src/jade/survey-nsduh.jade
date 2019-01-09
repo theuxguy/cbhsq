@@ -1,0 +1,141 @@
+extends layouts/rightrail
+
+block config
+  - var pageTitle = 'CBHSQ Prototype | NSDUH'
+  - var bodyClass = 'survey'
+  - var breadcrumb = 'Data We Collect > NSDUH'
+
+block main
+  h1 National Survey on Drug Use and Health
+  div.survey-logo
+    img(src="http://via.placeholder.com/250x100")
+  p  The National Survey on Drug Use and Health (NSDUH) measures:
+  ul.showbullets
+    li use of illegal drugs, prescription drugs, alcohol, and tobacco
+    li mental disorders, treatment, and co-occurring substance use and mental disorders
+    p The data help to identify substance use and mental illness measures and provide estimates at the national, state, and sub-state level. NSDUH data also help to identify the extent of substance use and mental illness among different sub-groups, estimate trends over time, and determine the need for treatment services.
+
+  div
+    h3 Learn More About Each of Our Reports
+    p Short description of this section. Lorem ipsum dolor sit amet, consectetur adipiscing 
+    a( onclick="toggle_visibility('key');") [-]
+    | NSDUH Annual Reports
+    div.collapse#key
+      ul.showbullets
+          li 2016
+          li 2015
+    br
+    a( onclick="toggle_visibility('trends');") [-]
+    | NSDUH State Reports
+    div.collapse#trends
+      ul.showbullets
+          li  2016
+          li 2015
+    br
+    a( onclick="toggle_visibility('use');") [-]
+    | NSDUH Sub-state Reports
+    div.collapse#use
+      ul.showbullets
+          li 2016
+          li 2015
+    br
+    br
+  h2 Population
+  p NSDUH collects data through face-to-face interviews with residents of households who are:
+  ul.showbullets
+    li US civilians
+    li older than 12 years old
+    li not institutionalized
+  p This includes people who live in non-institutional group residences, such as shelters, rooming houses, or dormitories, as well as civilians living on military bases. The survey does not include people who are homeless or do not use shelters, military personnel on active duty, or residents of institutional group quarters, such as jails and hospitals.
+  
+  h2 History
+  p The federal government has conducted the survey since 1971. Over the years, the survey has undergone a series of changes. In 1999, the survey shifted from paper-and-pencil data collection to computer-assisted interviewing (CAI). With CAI, staff administer most questions with audio computer-assisted self-interviewing. This provides a confidential way to answer questions and encourages honest responses.
+  p Also in 1999, the sample design expanded to include all 50 states and the District of Columbia. In 2002, the name of the survey changed from the National Household Survey on Drug Abuse to NSDUH. The survey also began including a $30 incentive for respondents. The most updates are changes to the sampling design (2014) and changes to the questionnaire (2015).
+  
+  div.questionaires
+    h3 Resources
+    p select which item to view: 
+      select
+        each year, i in  ["2017 Questionaires and Methods", "2016 Questionaires and Methods", "2015 Questionaires and Methods"]
+          option(value=i) #{year}
+    div.box.0.2017
+        p Evaluation of Imputation Methods for the National Survey on Drug Use and Health 
+          a PDF
+        p  NSDUH: An Overview of Trend Testing Methods and Applications in NSDUH and Other Studies 
+          a PDF
+        p NSDUH 2017 Methodological Resource Book (MRB) 
+          br
+          a 2017 NSDUH Field Interviewer Manual [PDF]
+          br
+          a 2017 NSDUH Questionnaire [PDF]
+          br
+          a 2017 NSDUH Showcards [PDF]
+      div.box.1.2016
+        h4  2016 Questionaires and Methods
+        p Evaluation of Imputation Methods for the National Survey on Drug Use and Health 
+          a PDF
+        p  NSDUH: An Overview of Trend Testing Methods and Applications in NSDUH and Other Studies 
+          a PDF
+        p NSDUH 2016 Methodological Resource Book (MRB) 
+          br
+          a 2016 NSDUH Field Interviewer Manual [PDF]
+          br
+          a 2016 NSDUH Questionnaire [PDF]
+          br
+          a 2016 NSDUH Showcards [PDF]
+    div.box.2.2015
+      h4  2015 Questionaires and Methods
+      p Evaluation of Imputation Methods for the National Survey on Drug Use and Health 
+        a PDF
+      p  NSDUH: An Overview of Trend Testing Methods and Applications in NSDUH and Other Studies 
+        a PDF
+      p NSDUH 2015 Methodological Resource Book (MRB) 
+        br
+        a 2015 NSDUH Field Interviewer Manual [PDF]
+        br
+        a 2015 NSDUH Questionnaire [PDF]
+        br
+        a 2015 NSDUH Showcards [PDF]
+      
+    
+  div
+    h3 Latest in NSDUH
+    include parts/latestrelease
+        
+  script(type='text/javascript').
+    $(document).ready(function(){
+    $("select").change(function(){
+    $(this).find("option:selected").each(function(){
+    var optionValue = $(this).attr("value");
+    if(optionValue){
+    $(".box").not("." + optionValue).hide();
+    $("." + optionValue).show();
+    } else{
+    $(".box").hide();
+    }
+    });
+    }).change();
+    });
+    
+block sidebar
+  div.search-reports-form
+    input(type="text" value="Search NSDUH")
+    a.btn.btn-large.search Search
+    
+  div
+    h3 View By Report Type
+    ul.typelist
+    -each val in ["Data Tables", "Substate/Metro Reports", "State Reports", "National Data", "Data Reviews", "Spotlights", "CBHSQ Reports"]
+      li
+        a= val
+
+    
+      
+      
+
+      
+      
+      
+      
+      
+      

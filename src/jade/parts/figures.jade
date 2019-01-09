@@ -1,0 +1,27 @@
+mixin figuresm(title)
+  div.figure-sm
+    div.figure-image
+      img(src="stuff/img/cube.png") 
+    div.figure-content
+      p.figure-title= title
+      p
+        a View Figure
+
+mixin figures(title, img, description)
+  div.figure
+    p.figure-title= title
+    img.figure-image(src= img)
+    p.figure-description= description
+    
+mixin fig(title, img, description)
+  div.figure-sm
+    div.figure-image
+      img(src="stuff/img/cube.png") 
+    div.figure-content
+      p.figure-title= title
+      p
+        a View Figure
+  div.figure
+    p.figure-title= title
+    img.figure-image(src= img)
+    p.figure-description= description

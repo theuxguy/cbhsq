@@ -1,0 +1,22 @@
+extends layouts/landing
+
+block append config
+  - var bodyClass = 'faq'
+  - var pageTitle = 'CBHSQ Prototype | FAQ'
+  
+block main
+  div.faq-hero
+    .kick Support
+    h1 How can we help?
+  .tabs
+    input.tab#tab1(type='radio', name='tabs', checked='')
+    label.tab(for='tab1') Frequently Asked Questions
+    input.tab#tab2(type='radio', name='tabs')
+    label.tab(for='tab2') Contact Us
+    .content
+      #content1
+        include parts/faq-content
+      #content2
+        include parts/faq-contact
+        
+// https://stanhub.com/create-responsive-tabs-using-css-only-no-jquery/

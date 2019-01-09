@@ -1,0 +1,11 @@
+mixin toc
+  ul
+    each val in ["In Brief", "Introduction", "Methods", "State Estimates", "Changes Over Time", "Discussion"]
+      li= val
+div.toc
+  h3 Table of Contents
+  +toc
+div.tocsm
+  h3 Table of Contents
+    img(src="/stuff/img/chevron.png")
+  +toc

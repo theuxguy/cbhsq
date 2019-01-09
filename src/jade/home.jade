@@ -1,0 +1,48 @@
+extends layouts/landing
+
+block append config
+  - var bodyClass = 'home'
+  - var pageTitle = 'CBHSQ Prototype | Home'
+  
+block main
+  div.search-reports
+    h1 Welcome to SAMHSA Data and Research
+    div.search-reports-form
+      input(type="text" value="Search SAMHSA Data and Research")
+      a.btn.btn-large(href="search.html") Search
+      
+  div.annoucements
+   p.kick Annoucements
+   p.title SAMHSA partners with NCHS to make Restricted NSDUH data 
+   p  Substance Abuse and Mental Health Services Administration has partnered with the National Center for Health Statistics (NCHS) to host restricted data from the National Survey on Drug Use and Health (NSDUH). 
+   p Eligible researchers may now apply for access to these data.  For more information please visit the 
+    a FAQ here
+    | .
+  div.topics.hottops
+    h2 Priority Topics
+    ul
+      li
+        h4 Serious Mental Illness
+        p small excerpt of description text here... three lines of text maximum. small excerpt of description text here... three lines of text  maximum.
+      li
+        h4 Serious Emotional Disturbance
+        p small excerpt of description text here... three lines of text maximum. small excerpt of description text here... three lines of text  maximum.
+      li 
+        h4 Opioids
+        p small excerpt of description text here... three lines of text  maximum. small excerpt of description text here... three lines of text  maximum.
+        
+  div.topics
+    h2 Data Categories
+    ul
+      each val in ["Alcohol Misuse", "Cocaine",  "Depression", "Health Economics and Finance", "Marijuana", "Nonmedical Use", "Research and Methodology",  "Tobacco", "Treatment"]
+        li
+          a(href="topics.html")= val
+  
+  div.home-content
+    h3 Latest Reports  
+    include parts/latestrelease
+    include parts/collections
+  include parts/findtreatment
+
+
+  

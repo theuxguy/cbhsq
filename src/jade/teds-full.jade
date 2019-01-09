@@ -1,0 +1,14 @@
+extends layouts/landing
+
+block append config
+  - var bodyClass = 'home'
+  - var pageTitle = 'CBHSQ Prototype | Home'
+  - var breadcrumb = 'Treatment Episode Data Set (TEDS) 2005-2015'
+    
+block main
+  p
+    a(href="methodology.html") < Back
+  iframe(type='text/html' width='100%' height='1024px' src='https://www.samhsa.gov/data/sites/default/files/2005-2015%20TEDS%20National%20Admissions.html' frameborder='0')
+
+  
+  

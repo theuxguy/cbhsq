@@ -1,0 +1,18 @@
+extends layouts/rightrail
+
+block append config
+  - var bodyClass = 'toc-rightrail'
+  - var pageTitle = 'CBHSQ Prototype | TEDS Report'
+  - var breadcrumb = 'Treatment Episode Data Set (TEDS) 2005-2015'
+  
+block main
+  iframe(type='text/html' width='100%' height='1024px' src='https://www.samhsa.gov/data/sites/default/files/2005-2015%20TEDS%20National%20Admissions.html' frameborder='0')
+
+  
+  
+block sidebar
+  h3 Table of Contents
+  ul
+    -each val in ["Title Page", "Acknowledgments", "List of Tables", "List of Figures", "Highlights", "Chapter 1. Trends in Substance Abuse Treatment Admissions Aged 12 and Older: 2005-2015",  "Chapter 2. Characteristics of Admissions by Primary Substance: 2015", "Chapter 3. Topics of Special Interest", "Chapter 4. Type of Treatment Services: 2015", "Tables", "Appendix A. About the Treatment Episode Data Set (TEDS)", "Appendix B. TEDS Data Elements", "Appendix C. List of Contributors"]
+      li= val
+  include parts/relatedtags.jade

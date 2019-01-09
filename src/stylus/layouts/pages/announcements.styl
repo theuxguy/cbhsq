@@ -1,0 +1,123 @@
+div.title_announcements
+  display Flex
+  h2.announcement_title
+    flex 3
+  div.sortby
+    display flex
+    flex 1
+
+
+h3.archives
+  margin: 0
+
+div.announcement_card
+    margin-right: 20px
+    margin-bottom: 10px;
+    padding 20px
+    border-style solid
+    border-width 1px
+    border-color #f4f4f4
+    border-radius 3px
+    box-shadow 0 4px 8px 0 rgba(0 0 0 0.2)
+
+  .headline
+      display flex
+   .headlinename
+      flex 4
+      margin-top 10px
+      margin-bottom 10px
+      font-weight: bold;
+    .datepublished
+      flex 1
+      margin-top: 10px
+      margin-bottom: 10px
+      font-size: 14px;
+
+.readmore
+ margin-left: 0;
+ font-size: 14px;
+
+ .author
+   font-size: 14px;
+
+.announcement_list
+  padding: 25px 0 25px 0;
+  .content
+         display: flex;
+         justify-content: space-between;
+      img.newimg
+           display: flex
+           width 200px
+           height 120px
+           padding-top: 20px
+      div.desc
+         display: flex;
+         font-size: 14px;
+
+.archiveitem
+  margin: 40px 0 40px 0;
+  font-size: 14px;
+  .archivetitle
+    .title
+      font-size: 16px;
+      font-weight: bold;
+      margin: 20px 0 0 0;
+  .datepub
+    font-style: italic;
+    margin-bottom: 10px;
+
+h2.headline
+    padding: 0 20px 20px 20px
+
+h4.authoranddate
+    padding: 0 20px 20px 20px
+    margin-top:20px
+    display Flex
+    .author
+      flex 2
+    .date
+      flex 1
+      font-style: italic;
+
+div.introtext
+  display flex
+  @media(min-width: $md)
+     flex-direction: row;
+  @media(max-width:$md)
+    flex-direction: column;
+  img.annimage
+    flex 1
+    margin-top: 20px;
+    padding:20px 20px 20px 20px
+    max-width:100%
+    max-height: 300px
+  .intro
+    flex 3
+    padding: 30px 0 20px 0
+
+div.bodytext
+  font-size: 16px;
+  padding: 0 20px 20px 20px
+
+div.social
+  display Flex
+  .sharethis
+    flex 1
+    padding: 30px 0 20px 20px
+  .socialicons
+    flex 4
+    .fa
+      flex 2
+      font-size: 25px;
+      margin: 0 10px 0 10px;
+      padding: 30px 0 20px 20px
+
+h3.relatednews
+  padding: 30px 0 0 20px
+div.relatedlist
+      display flex
+      .relatednews
+        padding: 40px 20px 20px 20px
+        flex 3
+        .title
+          font-weight: bold;

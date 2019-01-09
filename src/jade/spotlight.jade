@@ -1,0 +1,71 @@
+extends layouts/foursquare
+
+block append config
+  - var bodyClass = 'spotlight'
+  - var pageTitle = 'CBHSQ Prototype | Spotlight'
+  
+block head
+  div.report-header
+    p.kicker CBHSQ Spotlight
+    h1 UNDERAGE DRINKING DECLINED BETWEEN 2002 AND 2013
+    div.report-header-body
+      div.report-head-image
+        img(src="https://www.samhsa.gov/data//sites/default/files/report_1978/images/image_file_0_SpotlightImageOne_1645291672.png")
+      div.report-head-content
+        p.report-date.label June 1, 2015
+        p.report-survey.label  Data Sources
+        p 
+          a National Survey on Drug Use and Health
+        p.report-author.label Authors
+        p Hughes, A., Williams, M.R., Lipari, R.N. and Van Horn
+
+block sidebar1
+  include parts/downloads.jade
+
+block main
+  p Underage alcohol use is one of the most serious public health issues facing youths in the United States. Every year, underage drinking undermines the well-being of America’s youths, causing a wide range of costly health and social problems. 
+    span.endnote 
+      a(onclick="toggle_visibility('end1');") 1
+    | Underage alcohol initiation increases a youth’s risk of developing an alcohol use disorder later in life and increases the likelihood of driving after drinking too much at some point in their lives. 
+    span.endnote 
+      a(onclick="toggle_visibility('end1');") 1
+    | However, alcohol remains the most widely used substance of abuse among America’s youths. For example, a higher percentage of youths aged 12 to 20 in 2013 used alcohol in the past month (22.7 percent) than tobacco (16.9 percent) or illicit drugs (13.6 percent).
+    div#end1.modal
+      div.modal-content
+        a.close(onclick="toggle_visibility('end1');") Close
+          i.fa.fa-close.fa-lg 
+        p Substance Abuse and Mental Health Services Administration. Report to Congress on the Prevention and Reduction of Underage Drinking. Washington, DC: Author.
+
+  p In 2013, about 8.7 million people aged 12 to 20 reported drinking alcohol in the past month. Approximately 5.4 million (14.2 percent) were current (e.g., past month) binge drinkers. Binge drinking is defined as having five or more drinks on the same occasion (i.e., at the same time or within a couple of hours of each other) on at least 1 day in the past 30 days.
+    span.endnote 
+      a(onclick="toggle_visibility('end2');") 2
+    | Underage drinking declined from 28.8 percent in 2002 to 22.7 percent in 2013. Underage binge drinking also decreased between 2002 and 2013. Despite these declines over time, about 1 in 5 people aged 12 to 20 were past month underage drinkers in 2013, and about 1 in 7 were binge drinkers.
+  div#end2.modal 
+    div.modal-content
+      a.close(onclick="toggle_visibility('end2');") Close
+        i.fa.fa-close.fa-lg 
+      p In this report, the definition of binge alcohol use is the same for both males and females and for all age groups.
+
+  // include mixin for small figures
+  include parts/figures.jade
+  +figuresm("Figure 1. Past year cocaine use among young adults aged 18 to 25, by state: percentages, annual averages based on 2014-2015 NSDUHs")
+  +figures('Past month alcohol use and binge alcohol use among people aged 12 to 20: 2002 to 2013', 'https://www.samhsa.gov/data//sites/default/files/report_1978/images/image_file_0_SpotlightImageTwo_469782381.png', '*Difference between this estimate and the 2013 estimate is statistically significant at the .05 level.')
+
+  div.endnotes-inline
+    H2 Endnotes
+    p
+      sup 1
+      | Substance Abuse and Mental Health Services Administration. Report to Congress on the Prevention and Reduction of Underage Drinking. Washington, DC: Author.
+    p
+      sup 2 
+      | In this report, the definition of binge alcohol use is the same for both males and females and for all age groups.
+  div.report-footer
+    p The 
+      a National Survey on Drug Use and Health (NSDUH) 
+      | is an annual survey sponsored by SAMHSA. NSDUH collects data by administering questionnaires to a representative sample of the population through face-to-face interviews at their place of residence. The data used in this report are based on information obtained from young adults aged 18 to 25 (22,000 in 2013, and 16,000 in 2014, and 17,000 in 2015). 
+    p
+      a Learn more about  NSDUH
+
+
+block sidebar2
+  include parts/relatedtags.jade

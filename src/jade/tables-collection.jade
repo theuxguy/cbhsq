@@ -1,0 +1,62 @@
+extends layouts/rightrail
+
+block append config
+  - var bodyClass = 'tables-collection'
+  - var pageTitle = 'CBHSQ Prototype | Tables Collection'
+  - var breadcrumb = '2014-2015 NSDUH State Estimates of Substance Use and Mental Disorders'
+  
+
+block sidebar
+  h3 Download all Tables
+  div.downloads-item.downloads-pdf
+    a
+      img.icon(src="stuff/img/pdf.png") 
+      span All Tables PDF
+  div.downloads-item.downloads-pdf
+    a
+      img.icon(src="stuff/img/xls.png") 
+      span All Tables XLS
+        
+  h3 Related Collections
+  a Results from the 2015 National Survey on Drug Use and Health: Detailed Tables
+  
+  div.whatis
+    h3 What is NSDUH
+    p The National Survey on Drug Use and Health (NSDUH) is an annual survey sponsored by SAMHSA. NSDUH collects data by administering questionnaires to a representative sample of the population through face-to-face interviews at their place of residence.
+    p
+      a Learn more about NSDUH
+  
+block main 
+  div.report-header
+    p.kicker Data Tables Collection
+    h1 2014-2015 NSDUH State Estimates of Substance Use and Mental Disorders
+  p 
+    b {brief description of collections} 
+    | Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  
+  div.tables
+    h3 State-specific Tables
+    h4 
+      a( onclick="toggle_visibility('state');") [-]
+      | View States 
+    div.collapse#state
+      iframe(type='text/html' width='100%' height='1400px' src='https://www.samhsa.gov/data/sites/default/files/NSDUHsaeStateTabs2015B/NSDUHsaeSpecificStatesTOC2015.htm' frameborder='0')
+
+    h3 Comparison of 2009-2009 and 2014-2015 NSDUH State Prevalence Estimates
+    p 
+      a View Online 
+      | |
+      a download PDF
+      h3 2014-2015 NSDUH Estimated Totals by State
+      p 
+        a download  Totals - XLS 
+        | |
+        a download Individual Totals by State - ZIP
+        | |
+        a download PDF
+        
+      h3  2014-2015 NSDUH State Prevalence Estimates - Individual Tables by Outcome
+      p 
+        a download  Totals - XLS  
+        | |
+        a download Individual Totals by State - ZIP

@@ -1,0 +1,32 @@
+extends layouts/rightrail
+
+block config
+  - var pageTitle = 'CBHSQ Prototype | BHSIS'
+  - var bodyClass = 'survey leftrail'
+  - var breadcrumb = 'BHSIS'
+
+block main
+  h1 BHSIS Program Description
+  p The Behavioral Health Services Information System (BHSIS) is the primary source of national information on the services available for substance abuse treatment and the characteristics of individuals admitted to treatment. BHSIS contains three data sets which are maintained with the cooperation and support of the States:
+  ol
+    li The Inventory of Behavioral Health Services (I-BHS), an electronic master list of all organized substance abuse treatment facilities known to the Substance Abuse and Mental Health Services Administration (SAMHSA)
+    li The National Survey of Substance Abuse Treatment Services (N-SSATS), an annual survey of the treatment providers on the I-BHS
+    li The Treatment Episode Data Set (TEDS), a national database containing a minimum data set of information about individuals admitted to and discharged from treatment (primarily by providers receiving public funding)
+  hr
+  h3 Contact Information
+  p Detailed contact information is provided for SAMHSA/CBHSQ and BHSIS Contractor personnel as well as for State personnel with BHSIS responsibilities. Errors or changes in the State contact information should be reported immediately to 
+    a bhsis_helpdesk@eagletechva.com.
+  h4 Federal and Contractor Staff
+  p 
+    a SAMHSA/CBHSQ and Contractor staff
+  h4 BHSIS State Contacts Guidelines
+  p "Guidelines for BHSIS State Contacts," is available below for download in pdf format. This document provides a brief description of each BHSIS component and outlines the role of SAMHSA and the States in BHSIS operations. It is particularly useful for State staff new to the BHSIS program. 
+    a Guidelines for BHSIS State Contacts
+    
+    
+    
+block sidebar
+  h3.thirdmenu BHSIS Surveys
+  ul.thirdmenu
+    -each val in ["Inventory of Behavioral Health Services (I-BHS)", "Treatment Episode Data Set (TEDS) ", "National Survey of Substance Abuse Treatment Services (N-SSATS)", "National Mental Health Services Survey (N-MHSS)", "National Mental Health Services Client-Level Data (MH-CLD)", "Uniform Reporting System (URS)"]
+      li= val

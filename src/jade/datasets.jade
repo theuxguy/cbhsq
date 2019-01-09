@@ -1,0 +1,52 @@
+- var pageTitle = 'DASIS Datasets'
+
+doctype
+html 
+ header 
+  title #{pageTitle}
+  include layouts/global/head 
+   
+  
+  body
+    .banner 
+    .container
+        h3
+          .dasis_title Access State Profiles of Treatment Facilities 
+           
+        mixin dataset(title, description, lastupdated, gotopage)
+         .dataset_card
+          .title_row
+             a.dataset_title(href="shortreport.html")= title
+             .dataset_updated= lastupdated
+           
+          .dataset_desc= description
+          
+          .select_dataset
+            .states
+            .state_label State:
+            select.statedropdown
+              option All States 
+  
+            .years
+            .year_label Year:
+            .year_dropdown
+            select
+              option All years
+              option 2014
+              option 2015
+              option 2016
+              option 2017
+              option 2018
+            
+            button.seedata
+              a.buttonlink(href=gotopage) See Data
+        
+                      
+            
+
+        .dataset_list   
+          +dataset ("Treatment Episode Data Set", "The Treatment Episode Data Set (TEDS) provides demographic information and describes the characteristics and outcomes of treatment for alcohol and/or drug use among clients aged 12 years and older admitted to treatment at facilities throughout the 50 states, the District of Columbia, U.S. territories, and other jurisdictions. TEDS includes treatment admissions at facilities that are licensed or certified by a state substance abuse agency to provide care for people with a substance use disorder (or facilities that are administratively tracked for other reasons). In general, facilities reporting TEDS data are those that receive state alcohol and/or drug agency funds (including federal block grant funds) for the provision of alcohol and/or drug treatment services.", "19 October 2018, Data Updated quarterly","dasistables.html") 
+          +dataset ("National Survey of Substance Abuse Treatment Services (N-SSATS)","The National Survey of Substance Abuse Treatment Services (N-SSATS) is an annual survey of facilities providing substance abuse treatment. It is conducted by the Substance Abuse and Mental Health Services Administration (SAMHSA). The N-SSATS collects data on the location, characteristics, services offered, and number of clients in treatment at alcohol and drug abuse treatment facilities (public and private) throughout the 50 states, the District of Columbia, U.S. territories, and other jurisdictions.", "20 October 2018, Data Updated annually")
+          +dataset("National Mental Health Services Survey (N-MHSS)","The National Mental Health Services Survey (N-MHSS) is an annual survey of facilities providing mental health treatment. It is conducted by the Substance Abuse and Mental Health Services Administration (SAMHSA). The N-MHSS collects data on the location, characteristics, services offered, and number of clients in treatment at mental health treatment facilities (public and private) throughout the 50 states, the District of Columbia, U.S. territories, and other jurisdictions.","20 October 2018, Data Updated annually")
+
+ .footer-dasis

@@ -1,0 +1,78 @@
+.smheader
+  @media(min-width: $sm)
+    display: none
+  p
+    margin: 0
+    padding: 0
+  .tophat
+    font-size: 0.625rem
+    color: c-paper
+    text-align: center
+    background-color:  c-dk-gray
+  .topmenu
+    padding-top: 10px
+    padding-right: 10px
+    padding-left: 10px
+    display: flex
+    justify-content: space-between
+    background-color:  c-lt-gray
+    img
+      width: 80%
+      padding: 10px
+      display: flex
+      align-items: center
+
+.header
+  @media(max-width: $sm)
+    display: none
+  .tophat
+    background-color:  c-dk-gray
+    height: 10px
+  .minimenu
+    display: flex
+    justify-content: flex-end
+    padding-right: 10px
+    li
+      float: left
+      color: c-link
+    li:nth-child(-n+3):after
+      content: " | "
+      color: c-ink
+  .main
+    display: flex
+    justify-content: space-between
+    align-items: center
+    .logo
+      flex: 1 30%
+    .search
+      flex: 2 70%
+      text-align: right
+      padding-right: 10px
+  .social
+    display: flex
+    justify-content: flex-end
+    padding-right: 10px
+  .menu
+    color: c-paper
+    background-color: c-ink
+    overflow: auto
+    ul
+      padding: 5px
+      @media(min-width: $sm)
+        li
+          float: left
+          padding: 2px
+        li:nth-child(-n+6):after
+          content: " | "
+        li:nth-child(5)
+          background-color: c-lt-gray
+          color: c-dk-gray
+          padding: 0 2px
+      @media(min-width: $md)
+        display: flex
+        justify-content: space-between
+        padding: 10px
+        li:nth-child(5)
+          background-color: c-lt-gray
+          color: c-dk-gray
+          padding: 0 20px

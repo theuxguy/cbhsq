@@ -1,0 +1,14 @@
+extends layouts/landing
+
+block append config
+  - var bodyClass = 'home'
+  - var pageTitle = 'CBHSQ Prototype | Home'
+  - var breadcrumb = '2015 National Survey on Drug Use and Health METHODOLOGICAL SUMMARY AND DEFINITIONS'
+  
+block main
+  p
+    a(href="methodology.html") < Back
+  iframe(type='text/html' width='100%' height='1024px' src='https://www.samhsa.gov/data/sites/default/files/NSDUH-MethodSummDefsHTML-2015/NSDUH-MethodSummDefsHTML-2015/NSDUH-MethodSummDefs-2015.htm' frameborder='0')
+
+  
+  

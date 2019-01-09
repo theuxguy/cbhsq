@@ -1,0 +1,15 @@
+block config
+  - var pageTitle = 'CBHSQ Prototype'
+  - var bodyClass = 'index'
+doctype 
+html
+  head
+    title #{pageTitle}
+    include global/head
+  body(class='#{bodyClass}')
+    include global/header
+    div.wrap
+      block main
+        h1 Wireframes for CBHSQ Data Page
+    include global/slimfooter
+    include global/footer

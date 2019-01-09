@@ -1,0 +1,31 @@
+.tabs {margin: 0 auto; min-width: 320px; max-width: 800px;}
+     .content {background: #fff; color: #373737;}
+     .content > div {display: none; padding: 20px 25px 5px;}
+
+     input.tab {display: none;}
+     label {display: inline-block; padding: 15px 25px; font-weight: 600; text-align: center; border-bottom: 1px solid c-ink;  color: c-link}
+     label:hover {color: c-link-hover ; cursor: pointer;}
+     input:checked + label {color: c-ink; border:  1px solid c-ink; border-bottom: 0}
+
+     #tab1:checked ~ .content #content1,
+     #tab2:checked ~ .content #content2,
+     #tab3:checked ~ .content #content3,
+     #tab4:checked ~ .content #content4 {
+       display: block;
+     }
+ .faq
+   margin: 0 auto;
+  .filter-menu
+    margin-top: 20px
+  h4
+    font-weight: 400
+  .faq-hero
+    height: 100px
+    width: 100%
+    padding: 2%
+    margin: 0
+    margin-bottom: 20px
+    background-color: c-lt-gray
+  textarea
+    width: 300px
+    height: 100px

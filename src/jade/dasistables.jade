@@ -1,0 +1,112 @@
+- var pageTitle = 'DASIS Tables'
+
+doctype
+html 
+ header 
+  title #{pageTitle}
+  include layouts/global/head 
+  
+  body
+    .banner
+    .container
+        
+        h3.table_title Substance Use Treatment Admissions by Primary Substance of Use
+        
+        div.tag According to Sex, Age Group, Race, and Ethnicity among admissions aged 12 and older: Maryland,2016 
+             
+        div.subtitle
+              .aboutdata 
+                .sometext Show &nbsp;
+                select
+                  option 10
+                .entries &nbsp; entries  
+               
+              .search
+                .search_label Search:
+                input.searchinput  
+                     
+              .export
+                .export_label Export As:
+                select.exportdropdown
+                    option PDF
+                    option XLS
+                    option Word
+                                        
+        div.scroller      
+         table.datatable 
+           thead
+             th.tabheader State: Maryland
+             th.tabheader &nbsp;
+             th.tabheader Total
+             thead 
+             th.tabheader &nbsp;
+             th.tabheader &nbsp;
+             th.tabheader Alcohol only &nbsp;
+              i(class='fas fa-sort' aria-hidden='true')
+             th.tabheader Alcohol with secondary drug &nbsp;
+              i(class='fas fa-sort' aria-hidden='true')
+             th.tabheader Heroin &nbsp;
+              i(class='fas fa-sort' aria-hidden='true')
+             th.tabheader Other opiates &nbsp;
+              i(class='fas fa-sort' aria-hidden='true')
+             th.tabheader Cocaine (smoked)&nbsp;
+              i(class='fas fa-sort' aria-hidden='true')
+             th.tabheader Cocaine (other route) &nbsp;
+              i(class='fas fa-sort' aria-hidden='true')            
+             th.tabheader Marijuana &nbsp;
+              i(class='fas fa-sort' aria-hidden='true')
+             th.tabheader Amphitamine
+              i(class='fas fa-sort' aria-hidden='true')
+             th.tabheader Other Stimulents &nbsp;
+              i(class='fas fa-sort' aria-hidden='true')
+             th.tabheader Tranquilizers &nbsp;
+              i(class='fas fa-sort' aria-hidden='true')
+             th.tabheader Sedatives &nbsp;
+              i(class='fas fa-sort' aria-hidden='true')
+             th.tabheader Hallucinogens &nbsp;
+              i(class='fas fa-sort' aria-hidden='true')
+             th.tabheader PCP &nbsp;
+              i(class='fas fa-sort' aria-hidden='true')
+             th.tabheader Inhalents &nbsp;
+              i(class='fas fa-sort' aria-hidden='true')
+             th.tabheader Other/Unknown &nbsp;
+              i(class='fas fa-sort' aria-hidden='true')
+               
+            tr.mainrow 
+              td Total
+               td No.
+               for val in ['12,879','1,993','4,579','7,930','2,453','909','4,819','8,891','1,200','3,474','4,111','5,079','234','7,890','4,572']               
+                td.cell=val
+                
+            tr.mainrow 
+               td &nbsp;
+               td %    
+                              
+                 for val in ['56.1','15','78','45','56','89','51','90','12','23','56','78','34','67','90']               
+                  td.cell=val
+                     
+            tr.innerrow  
+              td.stickycol Gender
+            
+            for p, pindex in ['Male','Female','Unknown','Total']
+              tr.mainrow
+                td.stickycol=p
+                td %
+                    
+                    for q, qindex in [4.5,3,9,2,1,5,8,6,4,6.5,8,9,11,2,8]
+                     td.cell= (pindex+1)*q
+                   
+        div.bells
+             
+          div.pagination
+            a(href="#") &laquo;
+            a(href="#" class="active") 1
+            a(href="#") 2
+            a(href="#") 3
+            a(href="#") 4
+            a(href="#") 5
+            a(href="#") &raquo; 
+            
+          .showentries Showing 10 of 150 entries          
+              
+ 

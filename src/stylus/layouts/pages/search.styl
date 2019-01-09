@@ -1,0 +1,92 @@
+.search
+  .mobile
+    @media(min-width: $lg)
+      display: none
+
+  .search-reports-form
+    margin-bottom: 20px
+    input
+      //width: 80%
+  .toggleon
+    padding-bottom: 5px
+    i
+      margin-left: 50px
+
+  .viewer:before
+    content: " | "
+    @media(max-width: $md)
+      content: "\A";
+      white-space: pre;
+
+  @media(max-width: $md)
+    #refine-results
+      display:none
+  .article
+    order: 2
+  .sidebar
+    order: 1
+    padding-right: 20px
+  h1
+    margin: 0 0 20px
+  h4
+    margin: 0
+    padding: 0
+  .searchresultslist
+    margin: 30px 0 0 0
+  .reportlisting
+    margin-bottom: 20px
+    padding-bottom: 20px
+    border-bottom: 1px solid c-gray
+    .listing-title
+      color: c-link
+    .listing-meta
+      font-size: 0.75rem
+      display: flex
+      margin: 0
+      padding: 0
+      line-height: 0.75rem
+    .listing-branch
+      margin-right: 0.625rem
+      font-style: italic
+      flex: 1
+    .listing-dates
+      flex: 1
+    .list-collection
+      border-right: 1px solid c-gray
+      padding-right: 0.3125rem
+      margin-right: 0.3125rem
+    span
+      margin: 5px
+
+.filter
+  display:none
+  p
+    font-size: 14px
+    padding: 0
+    margin: 0
+  input
+    width: 3em
+    color: cl-gray
+  .states
+    input
+      width: 5em
+  i
+    padding: 0
+    margin: 0
+.ispace
+  i
+    padding: 0 10px
+
+.filter-menu
+  display: flex
+  justify-content: space-between
+  align-items: center
+  border-bottom: .5px solid c-gray
+
+.filter-group
+  margin-bottom: 20px
+
+.filter-scroll
+  height: 150px
+  overflow: scroll
+  overflow-y: scroll

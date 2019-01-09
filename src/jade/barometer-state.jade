@@ -1,0 +1,185 @@
+extends layouts/foursquare
+
+block append config
+  - var bodyClass = 'barometers'
+  - var pageTitle = 'CBHSQ Prototype | Barometers'
+  
+block head
+  div.report-header
+    p.kicker CBHSQ Barometers
+    h1 2015 Washington Behavioral Health Barometers
+        
+block sidebar1
+  include parts/downloads.jade
+      
+block main 
+  h2 Description
+  p The Substance Abuse and Mental Health Services Administration (SAMHSA), an operating division within the U.S. Department of Health and Human Services (HHS), is charged with reducing the impact of substance abuse and mental illness on America’s communities. SAMHSA is pursuing this mission at a time of signi cant change. Health care reform has been enacted, bringing sweeping changes to how the United States delivers, pays for, and monitors health care. Simultaneously, state budgets are shrinking, and  scal restraint is a top priority.
+  p
+    a.btn Download PDF
+
+  div.otherreports
+    h3 View other Barometers for 2015
+    h4 
+      a( onclick="toggle_visibility('national');") [-]
+      | National 
+    div.collapse#national
+      p
+        a 2015 National Behavioral Barometers
+    h4 
+      a( onclick="toggle_visibility('state');") [-]
+      | By State 
+    div.collapse#state
+      p
+        a Alabama 
+      p
+        a Alaska 
+      p
+        a Arizona 
+      p
+        a Arkansas 
+      p
+        a California 
+      p
+        a Colorado 
+      p
+        a Connecticut 
+      p
+        a Delaware 
+      p
+        a Florida 
+      p
+        a Georgia 
+      p
+        a Hawaii 
+      p
+        a Idaho 
+      p
+        a Illinois 
+      p
+        a Indiana 
+      p
+        a Iowa 
+      p
+        a Kansas 
+      p
+        a Kentucky 
+      p
+        a Louisiana 
+      p
+        a Maine 
+      p
+        a Maryland 
+      p
+        a Massachusetts 
+      p
+        a Michigan 
+      p
+        a Minnesota 
+      p
+        a Mississippi 
+      p
+        a Missouri 
+      p
+        a Montana 
+      p
+        a Nebraska 
+      p
+        a Nevada 
+      p
+        a New Hampshire 
+      p
+        a New Jersey 
+      p
+        a New Mexico 
+      p
+        a New York 
+      p
+        a North Carolina 
+      p
+        a North Dakota 
+      p
+        a Ohio 
+      p
+        a Oklahoma 
+      p
+        a Oregon 
+      p
+        a Pennsylvania 
+      p
+        a Rhode Island 
+      p
+        a South Carolina 
+      p
+        a South Dakota 
+      p
+        a Tennessee 
+      p
+        a Texas 
+      p
+        a Utah 
+      p
+        a Vermont 
+      p
+        a Virginia 
+      p
+        a Washington 
+      p
+        a West Virginia 
+      p
+        a Wisconsin 
+      p
+        a Wyoming
+
+    h4 
+      a( onclick="toggle_visibility('region');") [-]
+      | By Region
+    div.collapse#region
+      p
+        a Health and Human Services  Region 1 - Boston 
+        br 
+        |  serves state and local organizations in Connecticut, Maine, Massachusetts, New Hampshire, Rhode Island, and Vermont.
+      p
+        a Health and Human Services  Region 2 - New York  
+        br 
+        | serves state and local organizations in New Jersey, New York, Puerto Rico, and the Virgin Islands.
+      p
+        a Health and Human Services  Region 3 - Philadelphia  
+        br 
+        | serves state and local organizations in Delaware, District of Columbia, Maryland, Pennsylvania, Virginia, and West Virginia.
+      p
+        a Health and Human Services  Region 4 - Atlanta  
+        br 
+        | serves state and local organizations in Alabama, Florida, Georgia, Kentucky, Mississippi, North Carolina, South Carolina, and Tennessee.
+      p
+        a Health and Human Services  Region 5 - Chicago  
+        br 
+        | serves state and local organizations in Illinois, Indiana, Michigan, Minnesota, Ohio, and Wisconsin.
+      p
+        a Health and Human Services  Region 6 - Dallas  
+        br 
+        | serves state and local organizations in Arkansas, Louisiana, New Mexico, Oklahoma, and Texas.
+      p
+        a Health and Human Services  Region 7 - Kansas City  
+        br 
+        | serves state and local organizations in Iowa, Kansas, Missouri, and Nebraska.
+      p
+        a Health and Human Services  Region 8 - Denver  
+        br 
+        | serves state and local organizations in Colorado, Montana, North Dakota, South Dakota, Utah, and Wyoming.
+      p
+        a Health and Human Services  Region 9 - San Francisco  
+        br 
+        | serves state and local organizations in Arizona, California, Hawaii, Nevada, American Samoa, Commonwealth of the Northern Mariana Islands, Federated States of Micronesia, Guam, Marshall Islands, and Republic of Palau.
+      p      
+        a Health and Human Services  Region 10 - Seattle  
+        br 
+        | serves state and local organizations in Alaska, Idaho, Oregon, and Washington.
+
+block sidebar2
+  h3 View  Collection Years
+  ul
+    li 
+      a 2014
+    li 
+      a 2013

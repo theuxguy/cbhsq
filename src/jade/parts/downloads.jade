@@ -1,0 +1,49 @@
+h3 Downloads
+div.downloads
+  div.downloads-item.downloads-pdf
+    a(onclick="toggle_visibility('downloads-reports');")
+      img.icon(src="stuff/img/pdf.png") 
+      span Report PDF
+      
+  div.modal#downloads-reports
+    div.modal-content
+      p <i> This link would actually open the PDF in a new window</i>
+      p
+        a.close(onclick="toggle_visibility('downloads-reports');") Close
+
+  div.downloads-item.downloads-figures
+    a(onclick="toggle_visibility('downloads-figures');")
+      img.icon(src="stuff/img/cube.png") 
+      span Figures
+      
+  div.modal#downloads-figures
+    div.modal-content
+      h4 Please choose an item for download
+      ul 
+        li
+          img.icon(src="stuff/img/zip.png") 
+          span All Tables
+        li
+          img.icon(src="stuff/img/jpg.png") 
+          span Figure 2 Map & Table
+        li 
+          img.icon(src="stuff/img/zip.png") 
+          span Figure 3 Map & Table
+        li
+          img.icon(src="stuff/img/xls.png") 
+          span XLS
+        p
+        a.close(onclick="toggle_visibility('downloads-figures');") Close
+
+  div.downloads-item.downloads-citations
+    a(onclick="toggle_visibility('downloads-citations');")
+      img.icon(src="stuff/img/quote.png") 
+      span Cite this Report
+      
+  div.modal#downloads-citations
+    div.modal-content
+      p Select then copy text below to cite this report
+      div.copybox Hughes, A., Williams, M.R., Lipari, R.N. and Van Horn, <i>S. State estimates of past year cocaine use among young adults: 2014 and 2015.</i> The CBHSQ Report: December 20, 2016. Center for Behavioral Health Statistics and Quality, Substance Abuse and Mental Health Services Administration, Rockville, MD.
+      p APA format
+      p
+        a.close(onclick="toggle_visibility('downloads-citations');") Close

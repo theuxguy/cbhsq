@@ -1,0 +1,19 @@
+block config
+  - var pageTitle = 'CBHSQ Prototype'
+  - var bodyClass = 'index'
+doctype 
+html
+  head
+    title #{pageTitle}
+    include global/head
+  body(class='#{bodyClass}')
+    include global/header
+    div.wraprail
+      div.article
+        block main
+          h1 Hello World
+      div.sidebar
+        block sidebar
+          h2 I'm a sidebar
+    include global/slimfooter
+    include global/footer

@@ -1,0 +1,28 @@
+extends layouts/rightrail
+
+block append config
+  - var bodyClass = 'search'
+  - var pageTitle = 'CBHSQ Prototype | Search'
+  - var breadcrumb = 'Search'
+  
+block main
+  h1 Results related to "Teenagers"
+  p Sort By
+    select.form-control
+      option Lastest Published
+      option Survey Collection Date
+    span.viewer View: 
+    select.form-control
+      option 15
+      option 50
+      option 100
+      option All
+    |  out of 200 results 
+  include parts/searchresults.jade
+  include parts/pagination.jade
+
+block sidebar
+  div.search-reports-form
+    input(type="text" value="Search Again")
+    a.btn.btn-large Search
+  include parts/searchfilters.jade

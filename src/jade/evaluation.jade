@@ -1,0 +1,27 @@
+extends layouts/landing
+
+block append config
+  - var bodyClass = 'landing'
+  - var pageTitle = 'CBHSQ Prototype | Evaluation & Services'
+  
+mixin gallery (title, content)
+  .gallery-item
+    .g-image
+    .g-title= title
+    .g-content= content
+
+block main
+  .headerblock
+  .contentblock
+    .c-content
+      h1 Evaluation & Services
+      p SAMHSA’s Division of Evaluation, Analysis, and Quality assesses the impact of behavioral health programs, works to identify new prevention and treatment measures that reflect SAMHSA’s activities, and produces analytic and research publications to inform providers, policy makers, and programs about behavioral health and behavioral health services.
+  
+    .c-gallery
+      .gallery
+        +gallery ('Best Practices', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur mattis blandit ante a massa nunc.' )
+        +gallery ('Evaluation Policies', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur mattis blandit ante a massa nunc.' )
+        +gallery ('Reports & Data', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur mattis blandit ante a massa nunc.' )
+        +gallery ('Measuring Quality in Behavioral Health', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur mattis blandit ante a massa nunc.' )
+        +gallery ('National Registry of Evidence-based Programs & Practices (NREPP)', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur mattis blandit ante a massa nunc.' )
+        +gallery ('Best Practices', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur mattis blandit ante a massa nunc.' )

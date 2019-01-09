@@ -1,0 +1,42 @@
+div.smheader
+  div.tophat
+    p The Substance Abuse and Mental Health Services Administration
+  div.topmenu
+    div.menu
+      i(class="fa fa-bars fa-3x" aria-hidden="true")
+      p Menu
+    div.img
+      a(href="index.html")
+        img(src="https://www.samhsa.gov/sites/all/themes/omega_samhsa/images/main_logo.png")
+    div.search
+      i(class="fa fa-search fa-3x" aria-hidden="true") 
+      p Search
+
+div.header
+  div.tophat
+  div.minimenu
+    ul
+      li 
+        a(href="index.html") Home
+      li 
+        a(href="index-inprocess.html") Newsroom
+      li Site Map
+      li Contact Us
+  div.main
+    div.logo
+      a(href="index.html")
+        img(src="https://www.samhsa.gov/sites/all/themes/omega_samhsa/images/main_logo.png")
+    div.search
+      input(type="text" value="Search SAMHSA.gov")
+      a.btn Search
+  div.social
+    p Connect with SAMHSA:
+      i(class="fa fa-facebook fa-lg" aria-hidden="true") 
+      i(class="fa fa-twitter fa-lg" aria-hidden="true") 
+      i(class="fa fa-youtube fa-lg" aria-hidden="true")
+      i(class="fa fa-comment fa-lg" aria-hidden="true")
+  div.menu
+    ul
+      each val in ['Find Help & Treatment', 'Topics', 'Programs & Compaigns', 'Grants', 'Data', 'About Us', 'Publications']
+        li= val
+    

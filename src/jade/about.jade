@@ -1,0 +1,31 @@
+extends layouts/landing
+
+block append config
+  - var bodyClass = 'landing'
+  - var pageTitle = 'CBHSQ Prototype | About Us'
+  
+mixin gallery (title, content)
+  .gallery-item
+    .g-image
+    .g-title= title
+    .g-content= content
+
+block main
+  .headerblock
+  .contentblock
+    .c-content
+      h1 About Us
+      p The Center for Behavioral Health Statistics and Quality   (CBHSQ) is the government’s lead agency for behavioral health statistics, as designated by the Office of Management and Budget.
+      ul.showbullets
+        li Provides national leadership in behavioral health statistics and epidemiology
+        li Promotes basic and applied research in behavioral health data systems and statistical methodology
+        li Designs and carries out special data collection and analytic projects to examine issues for SAMHSA and other federal agencies
+        li Participates with other federal agencies in developing national health statistics policy
+      li Consults and advises SAMHSA’s Administrator and the Department of Health and Human Services' Secretary on statistical matters
+    .c-gallery
+      .gallery
+        +gallery ('Our Mission', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur mattis blandit ante a massa nunc.' )
+        +gallery ('Office & Divisions', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur mattis blandit ante a massa nunc.' )
+        +gallery ('Our Integrity', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur mattis blandit ante a massa nunc.' )
+    
+    

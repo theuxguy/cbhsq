@@ -1,0 +1,5 @@
+mixin modal(id, content)
+  div.modal(class= id)
+    div.modal-content= content
+      a.close(onclick="toggle_visibility('= id');") Close 
+// I don't know how to pass the id into onclick -- so this doesn't work    -- hoping for answer from StackOverflow

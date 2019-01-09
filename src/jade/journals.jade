@@ -1,0 +1,22 @@
+extends layouts/foursquare
+
+block append config
+  - var bodyClass = 'journals'
+  - var pageTitle = 'CBHSQ Prototype | Journals'
+  
+block head
+  div.report-header
+    p.kicker Journals
+    h1 Mothers’ Mental Health Treatment Associated with Greater Adolescent Mental Health Service Use for Depression
+        
+block sidebar1
+  include parts/relatedtags.jade
+
+block main 
+  h2 Description
+  p Despite concerns surrounding depression in adolescence and the existence of effective treatments, adolescent depression often goes untreated. In 2014, only 41.2% of adolescents experiencing a major depressive episode (MDE) received mental health treatment. Parents play a key role in adolescents’ treatment utilization. We examined whether among mothers with any mental illness, mothers’ utilization of mental health treatment was associated with greater likelihood of their adolescent children who experienced an MDE receiving mental health treatment. Using nationally representative data from the National Survey on Drug Use and Health (2008–2014), we performed logistic regression analysis to model the odds of adolescents (aged 12 to 17 years) with a past year MDE receiving any mental health treatment in the past year as a function of their mothers’ mental health treatment utilization in the past year, adjusting for control variables. The rate of adolescent treatment utilization was 66% when mothers had utilized treatment, as compared to 45% when mothers did not utilize treatment (p < 0.001). The odds of an adolescent with an MDE receiving mental health treatment were two times greater when the mother received mental health treatment as compared to adolescents whose mothers did not receive any mental health treatment (OR = 2.09, 95% CI [1.04, 4.17]). There was no effect of adolescent gender (OR = 1.15, 95% CI [0.40, 3.28]) or interaction between gender and mothers’ treatment (OR = 0.95, 95% CI [0.26, 3.46]). Barriers to adolescent mental health treatment may be lower when mothers receive mental health treatment.
+  p
+    a.btn-buy Buy PDF
+
+block sidebar2
+  

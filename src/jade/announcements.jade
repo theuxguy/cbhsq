@@ -1,0 +1,62 @@
+- var pageTitle = 'CBHSQ Announcements'
+
+doctype
+html 
+ header 
+  title #{pageTitle}
+  extends layouts/rightrail
+  
+block main     
+      h1 &nbsp;
+      
+        
+      div.title_announcements
+        h2.announcement_title CBHSQ Announcements
+        div.sortby
+            .sort_label Sort:   
+            .sortdropdown
+                select
+                  option By popularity
+                  option Newest to Oldest
+                  option Oldest to Newest
+                  option From A-Z
+                  option From Z-A
+        
+       mixin announcement(title, description, author, published, expiring, image, link)
+          div.announcement_card 
+              .headline
+                .headlinename= title
+                .datepublished= published
+                
+              .author= author
+                
+              .content
+                img.newimg(src= image)
+                div.desc
+                   .description= description
+                    a.readmore(href=link) &nbsp; Read more...
+               
+        .announcement_list         
+        +announcement("SAMHSA Helps Translate Science Into Real-Life Practice","The Substance Abuse and Mental Health Services Administration (SAMHSA) has launched a new Resource Center, aiming to give communities, clinicians, policy makers, and others the tools they need to put evidence-based information into practice.","Author: Jane Doe","16th November 2018", "16th March 2018", "stuff/img/science.jpg","announcementdetail.html")
+        +announcement("Feds choose Rutgers for Mental Health Tech Transfer Center","Rutgers University will receive $4.2 million in federal funding over five years to create a regional center — one of ten nationwide — to train and provide other support services to community-based mental health providers.","Author: John Doe","21st November 2018", "16th March 2018", "stuff/img/rutgers.jpg","")
+        +announcement("The Substance Abuse and Mental Health Services Administration (SAMHSA): New Directions","These are important times for addressing behavioral health issues—specifically, the mental and substance use disorders that affect over 64 million Americans every year. The enactment of the 21st Century Cures Act brought into sharp focus the importance of these issues in the lives of individuals, families, communities, and the nation.","Author: John Doe","24th November 2018", "16th March 2018", "stuff/img/directions.jpg","")
+          
+block sidebar  
+  h2 &nbsp;
+  h3.archives From the archives
+  
+  mixin archiveitem(title, desc, published)
+   div.archiveitem
+      
+    .archivetitle 
+      div.title=title
+      div.datepub=published
+      
+    .archivedesc=desc
+    a.readmore(href="") Read more...
+      
+    
+  
+  div.archivelist
+    +archiveitem("SAMHSA awards $61.1 million in suicide prevention funding","The Substance Abuse and Mental Health Services Administration (SAMHSA) today announced it has awarded up to $61.1 million in grants to be disbursed over several years for suicide prevention programs","12th March 2017")
+    +archiveitem("HHS Awards Over $1 Billion to Combat the Opioid Crisis","This week, the U.S. Department of Health and Human Services awarded over $1 billion in opioid-specific grants to help combat the crisis ravaging our country. The awards support HHS's Five-Point Opioid Strategy, which was launched last year and enhanced this week.","22nd April 2017")

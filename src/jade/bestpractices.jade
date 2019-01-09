@@ -1,0 +1,23 @@
+extends layouts/rightrail
+
+block append config
+  - var bodyClass = 'static'
+  - var pageTitle = 'CBHSQ Prototype | Best practices'
+
+  
+block main
+  .headerblock
+  h1 Best Practices
+  p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur purus justo, vestibulum vitae vestibulum vitae, lacinia in sem. Nullam tristique, orci eu suscipit congue, eros nisi facilisis dui, quis blandit ipsum enim at dolor. Mauris nunc nisi, condimentum vel malesuada at, consequat vel est. Pellentesque elementum dolor eu placerat tincidunt. Phasellus ornare augue sit amet felis egestas interdum. Etiam et velit posuere, venenatis massa ut, suscipit lacus. Maecenas lectus nisl, hendrerit quis dapibus eget, accumsan at libero. Proin fermentum mi leo, vel faucibus purus tincidunt at.
+  p Nam tincidunt mi a est sodales, consectetur tempus orci auctor. Vestibulum elementum neque nec ipsum euismod semper. Pellentesque rhoncus sem ut eros dictum aliquet. Ut ut efficitur augue. Quisque eget mi sed diam congue viverra. Nam id ullamcorper ex. Duis gravida faucibus sapien at pretium. Ut vel mattis dui. Nullam sit amet nunc nec dui dignissim aliquet. Suspendisse facilisis libero ac lorem sodales, et ultrices eros elementum.
+  p Praesent hendrerit vitae sem quis maximus. Nunc auctor tortor eget est iaculis, id euismod arcu maximus. Vivamus feugiat odio vehicula purus finibus, viverra malesuada dolor faucibus. Aenean ut est tortor. Donec rutrum congue sem eget pretium. Aliquam quis quam vitae erat aliquam pulvinar. Donec ut erat non orci accumsan imperdiet gravida et tellus. Phasellus maximus ligula et lobortis efficitur. Donec vitae lorem ac dui facilisis ultricies sit amet in ante. Cras suscipit in dui ac egestas. Sed in varius ligula. Vivamus rhoncus laoreet lectus, sodales hendrerit elit egestas non. Fusce pellentesque bibendum dolor vitae tristique. Proin purus enim, rhoncus a consectetur quis, dictum vel felis.
+ p Duis a augue nisl. Phasellus sed justo mollis, feugiat orci sed, fermentum turpis. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla varius congue erat sed molestie. Sed congue eu ante vel sagittis. Nulla tristique consectetur nibh at ullamcorper. Aenean et libero quis lectus molestie tincidunt. Ut eu leo felis. Sed id iaculis dui. Integer dui erat, fringilla sed dapibus at, sodales eget enim. Phasellus porttitor vehicula aliquam. Mauris blandit ullamcorper lobortis.
+ p Integer vel nisl enim. Morbi nibh sem, bibendum et magna in, tempor varius sapien. Nullam sapien purus, rhoncus ac sollicitudin vitae, varius vel enim. Nam eget purus eget velit lacinia malesuada malesuada ut tellus. Donec ac nisl nec ipsum commodo fermentum. Aliquam interdum metus in lobortis fringilla. Curabitur accumsan tortor eu leo viverra pretium. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec at eros quis diam pellentesque auctor sed ac diam. Cras id faucibus odio, eget ultricies metus. Ut ornare tortor sit amet lacinia ornare. Maecenas id magna at mauris bibendum mollis. Suspendisse ac nisl turpis. Ut eleifend nisi elementum urna varius, et vestibulum magna porta. Nunc ornare convallis sem, quis faucibus magna gravida eu.
+
+
+block sidebar
+ .content-secondary-menu
+   h3 Our Evaluation Methods 
+   ul
+    -each val in ['Best Practices', 'Evaluation Policies', 'Reports & Data', 'Measuring Quality in Behavior Health', 'National Registry of Evidence-based Programs & Practices (NREPP)']
+      li= val

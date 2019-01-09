@@ -1,0 +1,96 @@
+extends layouts/landing
+
+block append config
+  - var bodyClass = 'faq-annoucements'
+  - var pageTitle = 'CBHSQ Prototype | FAQ'
+  
+block main
+  div.faq-hero
+    .kick Support
+    h1 FAQ for RDC Access to CBHSQ Restricted-use Data
+
+    include layouts/global/mixins
+  .tabs
+    div.filter-menu
+      h4 If I was previously approved for access to the Data Portal, will I have to get reapproved? 
+      a( onclick="toggle_visibility('a');")
+        +fa("fa fa-caret-down fa-lg")
+    div.filter#a
+      p This is possible, but contingent on the following: 1) CBHSQ has on file your original, complete application, 2) the description of the research in the original application matches with the research you want to do now, 3) all persons listed in the original application are the same persons, and 4) none of the person based contact information has changed compared to the original application.  If all four of these criteria are met, then you do not need to fill out a new application, and CBHSQ will use your original application for the research you propose.
+
+    div.filter-menu
+      h4 If I was a previous user or previously approved for access to the Data Portal, will I get priority access at the RDCs?
+      a( onclick="toggle_visibility('b');")
+        +fa("fa fa-caret-down fa-lg")
+    div.filter#b
+      p We are instituting a first come, first serve approach for application acceptance and review.  Researchers will have to redo the Designate Agent Agreement and undertake confidentiality training.  Once approved, researchers will have to contact the RDC to book their own time and pay fees.
+    
+    div.filter-menu
+      h4  Is the content of application similar to past applications for access to restricted-use data?
+      a( onclick="toggle_visibility('c');")
+        +fa("fa fa-caret-down fa-lg")
+    div.filter#c
+      p The RDC application for access is has very similar in content compared to the original Data Portal applications.
+    
+    div.filter-menu
+      h4  Where are the RDCs located?
+      a( onclick="toggle_visibility('d');")
+        +fa("fa fa-caret-down fa-lg")
+    div.filter#d
+      p NCHS RDC locations are described at: 
+        a https://www.cdc.gov/rdc/leftbrch/locaterdc.htm   
+        | Census RDC locations are described at: 
+        a https://www.census.gov/about/adrm/fsrdc/locations.html 
+    
+    div.filter-menu
+      h4  What are the fees for accessing the RDCs?
+      a( onclick="toggle_visibility('e');")
+        +fa("fa fa-caret-down fa-lg")
+    div.filter#e
+      p NCHS RDC fee structures is given at: 
+        a https://www.cdc.gov/rdc/b5aprovproj/ap540.htm. 
+        | To find out more information on fees for Census RDCs, please contact the Census RDC closes to your location.  Contact information for each Census RDCs is given at: 
+        a https://www.census.gov/about/adrm/fsrdc/locations.html 
+      
+    div.filter-menu
+      h4  If I was a prior user in the Data Portal, will I have access to my previous research?
+      a( onclick="toggle_visibility('f');")
+        +fa("fa fa-caret-down fa-lg")
+    div.filter#f
+      p In most cases, CBHSQ will strive to provide researchers with their original Data Portal files and programming code, but in some instances, this may not be possible for technical reasons.
+      
+    div.filter-menu
+      h4  What can I take into the RDC with me? Can I bring my own SAS code?  Can I use other external data?  How would I bring it in?
+      a( onclick="toggle_visibility('g');")
+        +fa("fa fa-caret-down fa-lg")
+    div.filter#g
+      p You will be able to have SAS code and external data loaded into your RDC account if it is approved in your research proposal.  RDC employees will load these items into your account if approved.
+      
+    div.filter-menu
+      h4  Is there a limit for how many days in a row I can access the RDC?
+      a( onclick="toggle_visibility('h');")
+        +fa("fa fa-caret-down fa-lg")
+    div.filter#h
+      p The number of days you may work at the RDC is based on RDC policy, but in general will be determined by your funds and the availability of work stations at the RDC.  Contact the nearest RDC to your location for details.
+      
+    div.filter-menu
+      h4  What happens after I reach my limit of days for accessing the RDC? How long do I have to wait to access it again and do I have to reapply for access or just have a “cooling off” period?
+      a( onclick="toggle_visibility('i');")
+        +fa("fa fa-caret-down fa-lg")
+    div.filter#i
+      p We do not anticipate a limit on days; contact the nearest RDC to your location for details.
+      
+    div.filter-menu
+      h4  How many projects am I allowed to be working on at a time? Previous applications required that we list one per application.
+      a( onclick="toggle_visibility('j');")
+        +fa("fa fa-caret-down fa-lg")
+    div.filter#j
+      p You may work on multiple projects as long as these projects were described in your proposal and your proposal was approved for these multiple projects.
+
+    div.filter-menu
+      h4  Can we work in groups in the RDCs? Accessing data and talking about results/verifying and showing each other things?
+      a( onclick="toggle_visibility('k');")
+        +fa("fa fa-caret-down fa-lg")
+    div.filter#k
+      p This may be allowed, but contact the nearest RDC to your location for details and their policy on this matter.
+      

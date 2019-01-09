@@ -1,0 +1,36 @@
+extends layouts/foursquare
+
+block append config
+  - var bodyClass = 'shortreport'
+  - var pageTitle = 'CBHSQ Prototype | Short Report'
+  
+block head
+  div.report-header
+    p.kicker CBHSQ Report 
+    h1 STATE ESTIMATES OF PAST YEAR COCAINE USE AMONG YOUNG ADULTS: 2014 AND 2015
+    div.report-header-body
+      div.report-head-image
+        img(src="https://www.samhsa.gov/data//sites/default/files/report_2736/images/image_file_0_FirstPageImage_1572468838.jpg")
+      div.report-head-content
+        p.report-date.label December 21, 2016
+        p.report-survey.label Data Sources
+        p 
+          a National Survey on Drug Use and Health
+        p
+          a Centers for Disease Control and Prevention 
+        p.report-author.label Authors
+        p Arthur Hughes, M.S., Matthew R. Williams, Ph.D., Rachel N. Lipari, Ph.D., and Struther Van Horn, M.A.
+block sidebar1
+  include parts/downloads.jade
+  include parts/toc.jade
+  include parts/samhda
+block main
+  include parts/shortreport-body.jade
+  div.report-footer
+    p The 
+      a National Survey on Drug Use and Health (NSDUH) 
+      | is an annual survey sponsored by SAMHSA. NSDUH collects data by administering questionnaires to a representative sample of the population through face-to-face interviews at their place of residence. The data used in this report are based on information obtained from young adults aged 18 to 25 (22,000 in 2013, and 16,000 in 2014, and 17,000 in 2015). 
+    p
+      a Learn more about  NSDUH
+block sidebar2
+  include parts/relatedtags.jade

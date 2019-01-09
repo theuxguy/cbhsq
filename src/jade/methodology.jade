@@ -1,0 +1,34 @@
+extends layouts/foursquare
+
+block append config
+  - var bodyClass = 'methodology'
+  - var pageTitle = 'CBHSQ Prototype | Barometers'
+  
+block head
+  p
+    a(href="methodology.html") < Back to Search Results
+  div.report-header
+    p.kicker CBHSQ Methodology
+    h1 2015 National Survey on Drug Use and Health: Methodological Summary and Definitions
+        
+block sidebar1
+  include parts/downloads.jade
+
+block main 
+  h2 Description
+  p The 2015 Methodological Summary and Definitions report summarizes the 2015 NSDUH methods and other supporting information that are relevant to estimates of substance use and mental health issues. This report is organized into seven sections:
+  ul
+    li Section A describes the survey, including information about the sample design; data collection procedures; and key aspects of data processing, such as development of analysis weights.
+    li Section B presents technical details on the statistical methods and measurement, such as suppression criteria for unreliable estimates, statistical testing procedures, and issues for selected substance use and mental health measures.
+    li Section C describes changes that were made to the 2015 NSDUH questionnaire and the effects of these changes on the comparability of estimates between 2015 and earlier years.
+    li Section D includes a glossary that covers key definitions used the NSDUH reports and tables.
+    li Section E describes other sources of data on substance use and mental health issues, including data sources for populations outside the NSDUH target population.
+    li Section F lists references cited in the report.
+    li Section G lists contributors to the report.
+
+  p
+    a.btn Download PDF
+    a.btn(href="methodology-full.html") View Full Text >>
+
+block sidebar2
+   

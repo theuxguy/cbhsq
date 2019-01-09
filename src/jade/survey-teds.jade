@@ -1,0 +1,51 @@
+extends layouts/rightrail
+
+block config
+  - var pageTitle = 'CBHSQ Prototype | TEDS'
+  - var bodyClass = 'survey'
+  - var breadcrumb = 'Data We Collect > TEDS'
+
+block main
+  h1 Treatment Episode Data Set (TEDS)
+  p The TEDS is a minimum data set of demographic and drug history information about individuals admitted to treatment, primarily by providers receiving public funding. States extract these data from their administrative data systems and transmit them to SAMHSA on a regular basis. The TEDS includes data collected at admission and at discharge, maintained as two separate but linkable data sets. Recently, several new data elements were added to the TEDS data set to provide National Outcome Measures (NOMS). Nearly all states are currently providing the TEDS admission and discharge data (including the NOMS data elements). States not currently submitting both admission and discharge data are expected to begin submitting complete TEDS data in the near future.
+  script(type='text/javascript').
+    $(document).ready(function(){
+    $("select").change(function(){
+    $(this).find("option:selected").each(function(){
+    var optionValue = $(this).attr("value");
+    if(optionValue){
+    $(".box").not("." + optionValue).hide();
+    $("." + optionValue).show();
+    } else{
+    $(".box").hide();
+    }
+    });
+    }).change();
+    });
+  
+  div.latest-teds
+    h3 Latest from TEDS
+    ul
+      -each val in ["Treatment Episode Data Set (TEDS) 2004-2014. State Admissions to Substance Abuse Treatment Services", "Treatment Episode Data Set (TEDS) 2004-2014. National Admissions to Substance Abuse Treatment Services", "Treatment Episode Data Set (TEDS) 2013. Discharges from Substance Abuse Treatment Services", "Treatment Episode Data Set (TEDS) 2003-2013. State Admissions to Substance Abuse Treatment Services", "Treatment Episode Data Set (TEDS) 2012. Discharges from Substance Abuse Treatment Services"]
+        li= val
+    
+block sidebar
+  div.search-reports-form
+    input(type="text" value="Search TEDS")
+    a.btn.btn-large.search Search
+    
+  div
+    h3 View By Type
+    ul.typelist
+      li   TEDS Admission Reports
+      li  TEDS Discharge Reports
+      li  State Tables
+
+
+      
+      
+      
+      
+      
+      
+      

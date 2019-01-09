@@ -1,0 +1,57 @@
+@import 'colors'
+@import 'grid'
+@import 'typography'
+
+
+.btn
+  background-color: c-link
+  color: c-paper
+  text-decoration:none
+  padding:5px
+  border-radius:3px
+  font-size:1em
+  transition: all 0.5s ease;
+  &:hover
+    transition: all 0.5s ease;
+    background-color: c-paper
+    border:1px solid  c-link
+    color: c-link
+
+.btn-large
+  @extend .btn
+  font-size: 1.25rem
+
+.btn-buy
+    @extend.btn
+    background: url("/stuff/img/usd-circle-01.png");
+    background-size:  contain;
+    background-repeat: no-repeat;
+    background-color: c-link
+    padding-left: 40px
+
+
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: Source Sans Pro, sans-serif; /* 1 */
+  color: c-dk-gray
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 5px; /* 2 */
+  padding: 5px
+  border: 1px solid c-dk-gray
+}
+
+
+
+ol
+  li
+    display: list-item
+    margin-left: 1.5rem
+ul.showbullets
+  li
+    display: list-item
+    margin-left: 1.5rem

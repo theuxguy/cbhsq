@@ -1,0 +1,21 @@
+.figure
+  border: 1px solid c-ink
+  padding: 0.3125rem
+  margin: 1rem 0 1rem 0
+  @media(max-width: $sm)
+    display: none
+.figure-title
+  font-weight: bold
+.figure-description
+  font-style: italic
+  font-size: 0.75rem
+
+.figure-sm
+  .figure-image
+    filter: grayscale(1)
+    margin-right: 20px
+    height: auto
+  display: flex
+  justify-content: space-between
+  @media(min-width: $sm)
+    display: none

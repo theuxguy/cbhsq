@@ -1,0 +1,13 @@
+mixin fa(f)
+  i(class=f aria-hidden='true')
+
+mixin checkbox(values)  
+  each val in values
+    p
+      input(type="checkbox") 
+      span= val
+
+mixin modal(i, content)
+ div.modal(id= i)
+  div.modal-content= content
+   a.close(onclick="toggle_visibility('" + i + "');") Close 

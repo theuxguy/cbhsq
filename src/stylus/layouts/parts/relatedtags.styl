@@ -1,0 +1,16 @@
+.related-resources
+  .content
+    display: flex
+    justify-content: flex-start
+  .btn
+    margin: 20px 5px
+
+// when in right rail -- stack elements
+.wrapfoursquare, .wraprail
+  .related-resources
+    .content
+      @media(min-width: $lg)
+        display: block
+    .btn
+      @media(min-width: $lg)
+        margin: 20px 0

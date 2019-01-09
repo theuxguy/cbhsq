@@ -1,0 +1,53 @@
+extends layouts/landing
+
+block append config
+  - var bodyClass = 'index'
+  
+block append main
+  h3 Landing Pages
+  ul
+    li
+      a(href="home.html") Home page
+    li 
+      a(href="topics.html") Topics page
+    li Landing Page Examples - #[a(href="evaluation.html") Evaluation] | #[a(href="about.html") About]
+      
+    li Static Page Example - #[a(href="bestpractices.html") Best Practices]
+    li #[a(href="https://uxdiva.github.io/cbhsq2/faq.html") FAQ / Contact Us]
+    li #[a(href="https://uxdiva.github.io/cbhsq2/faq-annoucements.html") FAQ | Annoucements]
+
+  h3 Report Pages
+  ul
+    li
+      a(href="search.html") Search page
+    li 
+      a(href="shortreport.html") Short Report page
+    li 
+      a(href="spotlight.html") Spotlight page
+    li 
+      h4 Web Ready Reports
+      ul.showbullets
+        li
+          a(href="barometer.html") Barometers
+        li
+          a(href="barometer-state.html") State Barometers
+        li
+          a(href="methodology.html") Methodology Landing Page
+        li Long Report Page -- 
+          a(href="methodology-full.html") example 1
+          | |
+          a(href="teds-full.html") example 2
+      
+  h3 Data Tables
+  ul
+    li 
+      a(href="tables-collection.html") Data tables
+
+  h3 Data Source Landing Pages
+  ul
+    li 
+      a(href="survey-teds.html") Data Source landing - TEDS
+    li 
+      a(href="survey-nsduh.html") Data Source landing - NSDUH
+    li
+      a(href="survey-descriptions.html") Report Description Landing Page

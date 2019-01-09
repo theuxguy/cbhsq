@@ -1,0 +1,96 @@
+extends layouts/rightrail
+
+block config
+  - var pageTitle = 'CBHSQ Prototype | NSDUH Descriptions'
+  - var bodyClass = 'survey leftrail'
+
+block main
+  h1  Reports and Detailed Tables From the 2016 National Survey on Drug Use and Health (NSDUH)
+  p Find reports and detailed tables that present findings and data based on results of the 2016 National Survey on Drug Use and Health (NSDUH).
+  hr
+  p Details of the NSDUH findings were shared during a press conference on Thursday, September 7, 2017. Members of the public were invited to join the live webcast of the event which began at 9:00 a.m. Eastern time. A recording of the webcast will be coming soon.
+  p 
+    a View the NSDUH webcast slides (PDF | 1.4 MB)] 
+    | presented by Dr. Elinore F. McCance-Katz.
+  p Read 
+    a Secretary Price's Remarks 
+    | on the National Survey on Drug Use and Health.
+  
+  h2 First Finding Reports
+  p These reports are part of the First Finding Reports series for the 2016 NSDUH, an annual survey of the population of the United States ages 12 years or older. The main First Findings Report contains a cross-section of NSDUH data on substance use and substance use disorders, mental health issues among adults and adolescents, and co-occurring disorders. The other reports focus on specific topics, such as receipt of treatment among adults, substance use initiation, and risk and protective factors.
+  p View the slides based on the First Findings Report: 
+    a Key Substance Use and Mental Health Indicators in the United States (PDF | 8.13 MB)
+    | , 
+    a Receipt of Services for Substance Use and Mental Health Issues Among Adults (PDF | 3.15 MB)
+    | , and 
+    a Risk and Protective Factors and Estimates of Substance Use Initiation (PDF | 3 MB)
+    |.
+    
+    h3 Key Substance Use and Mental Health Indicators in the United States
+    p The 
+      a 2016 Key Substance Use and Mental Health Indicators report
+      |  (also available in 
+      a PDF | 2.0 MB
+      | ) summarizes the following:
+    ul.showbullets
+      li Use of illicit drugs (such as, marijuana, cocaine, heroin, hallucinogens, and inhalants, as well as the misuse of opioids, prescription pain relievers, tranquilizers, stimulants, and sedatives)
+      li Use of alcohol and tobacco products
+      li Rates and the number of substance use disorders
+      li Rates and the number of any mental illness, serious mental illness, and major depressive episode
+      li Estimates of suicidal thoughts, plans, and non-fatal attempts for adults ages 18 or older
+    p Additionally, substance use trends are presented for 2002 to 2016, while trends for most mental health issues are reported for 2008 to 2016.
+    
+    h3 Receipt of Services for Substance Use and Mental Health Issues Among Adults
+    p The 
+      a Receipt of Services for Substance Use and Mental Health Issues Among Adults report
+      |  (also available in 
+      a PDF – 2016 | 786 KB
+      | ) presents data from the 2016 NSDUH for substance use treatment and mental health service use among adults ages 18 or older in the United States.
+    p Report estimates show receipt of services for:
+    ul.showbullets
+      li Substance use treatment by adults ages 18 to 25, and 26 or older
+      li Mental health service by adults ages 26 to 49, and 50 or older
+    p Trends for most mental health service use are reported for 2008 to 2016; however, trends are not presented for substance use treatment because of methodological changes in 2015.
+    p The 
+      a Risk and Protective Factors and Estimates of Substance Use Initiation report
+      |  (also available in 
+      a PDF | 833 KB
+      |) presents data regarding the perceived harmfulness of using cigarettes, alcohol, and specific illicit drugs and the perceived availability of substances. Estimates are for specific age groups.
+    p The report estimates the perceived great risk of harm associated with the use of marijuana, cocaine, alcohol, and cigarettes alone and also according to whether people initiated use of these substances in the past year. In addition, the report examines youth-specific protective factors, such as perceptions about parents disapproving of youth substance use.
+    p Finally, this report estimates how many people initiated substance use in the past year and the average age at first use among them. Statistically significant differences between 2016 and prior years are noted for these various estimates.
+    h2 Detailed Tables
+    p The 2016 NSDUH report contains a collection of detailed tables that present data on substance use and mental health. The 
+      a tables 
+      | (also available in 
+      a PDF | 35.9 MB
+      | ) present national estimates of rates of substance use, numbers of users, and other measures related to illicit drugs, alcohol, and tobacco products. The focus is on trends between 2015 and 2016 and from 2002 to 2016, as well as differences across population subgroups in 2016. Please refer to Section C of the 
+      a Methodological Summary and Definitions report 
+      | for more information.
+    p The mental health tables present information for youths ages 12 to 17 and adults ages 18 or older on past year mental health measures (e.g., serious mental illness and suicide thoughts/behaviors among adults, major depressive episode for adults and youths) and past year mental health service utilization.
+    p Measures related to the co-occurrence of mental disorders with substance use or with substance use disorders also are presented for both adults and youth. These detailed tables focus mainly on trends between 2015 and 2016 and differences across population subgroups in 2016.
+    
+    h3 Methodology
+    p The 
+      a 2016 Methodological Summary and Definitions report 
+      | (also available in 
+      a PDF | 2.7 MB
+      |) summarizes the 2016 NSDUH methods and other supporting information that are relevant to estimates of substance use and mental health issues. This report is organized into seven sections:
+    ul.showbullets
+      li Section A describes the survey, including information about the sample design; data collection procedures; and key aspects of data processing, such as development of analysis weights.
+      li Section B presents technical details on the statistical methods and measurement, such as suppression criteria for unreliable estimates, statistical testing procedures, and issues for selected substance use and mental health measures.
+      li Section C covers special topics for the redesigned NSDUH prescription drug questions, including the effects of 2016 questionnaire changes on estimates.
+      li Section D includes a glossary that covers key definitions used in the NSDUH reports and tables.
+      li Section E describes other sources of data on substance use and mental health issues, including data sources for populations outside the NSDUH target population.
+      li Section F lists references cited in the report.
+      li Section G lists contributors to the report.
+
+
+block sidebar
+  h3.thirdmenu NSDUH
+  ul.thirdmenu
+    li NSDUH Annual Reports
+      li.fourth.highlight 2016
+      li.fourth 2015
+    -each val in ["NSDUH State Reports", "NSDUH Sub-state Reports"]
+      li= val
+      

@@ -1,0 +1,52 @@
+.landing
+  .headerblock
+      width 100%
+      height 250px
+      background-color c-lt-gray
+      margin-bottom 1.5625rem
+  .pageheader
+    @media (min-width: $lg)
+      display flex
+      align-items center
+      h1
+        flex 1
+        margin 1em
+      p
+        flex 2
+        margin 1em
+  .contentblock
+    @media (min-width: $md)
+      display flex
+      .c-content
+        flex 1
+      .c-gallery
+        flex 1
+        @media (min-width: $lg)
+          flex 2
+.gallery
+  display: flex
+  justify-content: space-around
+  flex-wrap: wrap
+  .gallery-item
+    margin 1em
+    width 100%
+    min-width: 33%;
+    @media (min-width: $lg)
+      width 20%
+  .g-image
+    width 100%
+    height 150px
+    background-color c-lt-gray
+    margin-bottom 10px
+  .g-title
+    color c-link
+    margin-bottom 10px
+    font-size: 1.375rem
+    @media (min-width: $lg)
+      font-size: 1.5rem
+.gallery-item:nth-child(4n)
+  .g-image
+    display: none
+  .g-title
+    font-size: 2.5rem
+    line-height: 2.5rem

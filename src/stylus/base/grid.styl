@@ -1,0 +1,60 @@
+// Screen Sizes
+$sm = 500px
+$md = 800px
+$lg = 1025px
+$xl = 1800px
+
+*, *:before, *:after
+    vendor(box-sizing, border-box)
+
+// force scroll bars
+html
+  overflow-y: scroll;
+
+::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 7px;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, .5);
+  -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, .5);
+}
+
+img
+  border: 0
+  max-width: 100%
+  height: auto
+  vertical-align: middle
+
+.icon
+  max-width:  1rem
+  padding: 0 0.3125rem 5px
+  filter: grayscale(1)
+
+// Flex grid
+.grid
+  display: flex
+  justify-content: space-between
+  @media(max-width: $sm)
+    display:block
+
+.grid-col
+  flex: 1
+  padding: 1.25rem;
+  @media(max-width: $sm)
+    padding: 0;
+
+grid-centered(s =200px)
+  width: s;
+  margin: auto;
+
+
+body
+  margin: 0
+  max-width: 100%
+
+.wrap
+  padding: 1.25rem
+  max-width: 1300px
+  margin: auto

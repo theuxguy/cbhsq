@@ -1,0 +1,50 @@
+mixin reportlisting(title, branch, collectiondate, reportdate, figures, excerpt, report)
+  div.reportlisting
+    h4.listing-title
+      a(href="shortreport.html")= title
+    div.listing-meta
+      p.listing-branch= branch
+      p.listing-dates Collection Date 
+        span.list-collection= collectiondate
+        | Report Date 
+        span.list-report= reportdate
+    div.list-excerpt= excerpt
+    if figures == 3
+      span
+        img.icon(src="stuff/img/pdf.png") 
+        | PDF
+      span
+        img.icon(src="stuff/img/xls.png") 
+        | XLS
+      span
+        img.icon(src="stuff/img/cube.png")  
+        | figures
+    else if figures == 2
+      span
+        img.icon(src="stuff/img/pdf.png") 
+        | PDF
+      span
+        img.icon(src="stuff/img/xls.png") 
+        | XLS
+    else
+      span
+        img.icon(src="stuff/img/pdf.png") 
+        | PDF
+          
+
+div.searchresultslist
+  +reportlisting("STATE ESTIMATES OF PAST YEAR COCAINE USE AMONG YOUNG ADULTS: 2014 AND 2015", "National Survey on Drug Use and Health","2014-2015", "December 20, 2016", "3", "Cocaine is a powerfully addictive stimulant. Recent findings suggest that cocaine use may be reemerging as a public health concern in the United States. These findings suggest that cocaine is emerging as an issue among young adults, although the prevalence of the issue is not uniform across all States", "shortreport")
+  +reportlisting("UNDERAGE DRINKING DECLINED BETWEEN 2002 AND 2013", "National Survey on Drug Use and Health", "2002-2013", "June 11, 2015", "1", "Underage alcohol use is one of the most serious public health issues facing youths in the United States. Every year, underage drinking undermines the well-being of America’s youths, causing a wide range of costly health and social problems.", "spotlight")
+  +reportlisting("Key Substance Use and Mental Health Indicators in the United States: Results from the 2015 National Survey on Drug Use and Health", "Populations Survey Branch", "2015", "September 2016", "2", "This national report summarizes key findings from the 2015 National Survey on Drug Use and Health for indicators of substance use and mental health among people aged 12 years old or older in the civilian, noninstitutionalized population of the United States.", "annualreport")
+  +reportlisting("STATE ESTIMATES OF PAST YEAR COCAINE USE AMONG YOUNG ADULTS: 2014 AND 2015", "National Survey on Drug Use and Health","2014-2015", "December 20, 2016", "3", "Cocaine is a powerfully addictive stimulant. Recent findings suggest that cocaine use may be reemerging as a public health concern in the United States. These findings suggest that cocaine is emerging as an issue among young adults, although the prevalence of the issue is not uniform across all States", "shortreport")
+  +reportlisting("UNDERAGE DRINKING DECLINED BETWEEN 2002 AND 2013", "National Survey on Drug Use and Health", "2002-2013", "June 11, 2015", "1", "Underage alcohol use is one of the most serious public health issues facing youths in the United States. Every year, underage drinking undermines the well-being of America’s youths, causing a wide range of costly health and social problems.", "spotlight")
+  +reportlisting("Key Substance Use and Mental Health Indicators in the United States: Results from the 2015 National Survey on Drug Use and Health", "Populations Survey Branch", "2015", "September 2016", "2", "This national report summarizes key findings from the 2015 National Survey on Drug Use and Health for indicators of substance use and mental health among people aged 12 years old or older in the civilian, noninstitutionalized population of the United States.", "annualreport")
+  +reportlisting("STATE ESTIMATES OF PAST YEAR COCAINE USE AMONG YOUNG ADULTS: 2014 AND 2015", "National Survey on Drug Use and Health","2014-2015", "December 20, 2016", "3", "Cocaine is a powerfully addictive stimulant. Recent findings suggest that cocaine use may be reemerging as a public health concern in the United States. These findings suggest that cocaine is emerging as an issue among young adults, although the prevalence of the issue is not uniform across all States", "shortreport")
+  +reportlisting("UNDERAGE DRINKING DECLINED BETWEEN 2002 AND 2013", "National Survey on Drug Use and Health", "2002-2013", "June 11, 2015", "1", "Underage alcohol use is one of the most serious public health issues facing youths in the United States. Every year, underage drinking undermines the well-being of America’s youths, causing a wide range of costly health and social problems.", "spotlight")
+  +reportlisting("Key Substance Use and Mental Health Indicators in the United States: Results from the 2015 National Survey on Drug Use and Health", "Populations Survey Branch", "2015", "September 2016", "2", "This national report summarizes key findings from the 2015 National Survey on Drug Use and Health for indicators of substance use and mental health among people aged 12 years old or older in the civilian, noninstitutionalized population of the United States.", "annualreport")
+  +reportlisting("STATE ESTIMATES OF PAST YEAR COCAINE USE AMONG YOUNG ADULTS: 2014 AND 2015", "National Survey on Drug Use and Health","2014-2015", "December 20, 2016", "3", "Cocaine is a powerfully addictive stimulant. Recent findings suggest that cocaine use may be reemerging as a public health concern in the United States. These findings suggest that cocaine is emerging as an issue among young adults, although the prevalence of the issue is not uniform across all States", "shortreport")
+  +reportlisting("UNDERAGE DRINKING DECLINED BETWEEN 2002 AND 2013", "National Survey on Drug Use and Health", "2002-2013", "June 11, 2015", "1", "Underage alcohol use is one of the most serious public health issues facing youths in the United States. Every year, underage drinking undermines the well-being of America’s youths, causing a wide range of costly health and social problems.", "spotlight")
+  +reportlisting("Key Substance Use and Mental Health Indicators in the United States: Results from the 2015 National Survey on Drug Use and Health", "Populations Survey Branch", "2015", "September 2016", "2", "This national report summarizes key findings from the 2015 National Survey on Drug Use and Health for indicators of substance use and mental health among people aged 12 years old or older in the civilian, noninstitutionalized population of the United States.", "annualreport")
+  +reportlisting("STATE ESTIMATES OF PAST YEAR COCAINE USE AMONG YOUNG ADULTS: 2014 AND 2015", "National Survey on Drug Use and Health","2014-2015", "December 20, 2016", "3", "Cocaine is a powerfully addictive stimulant. Recent findings suggest that cocaine use may be reemerging as a public health concern in the United States. These findings suggest that cocaine is emerging as an issue among young adults, although the prevalence of the issue is not uniform across all States", "shortreport")
+  +reportlisting("UNDERAGE DRINKING DECLINED BETWEEN 2002 AND 2013", "National Survey on Drug Use and Health", "2002-2013", "June 11, 2015", "1", "Underage alcohol use is one of the most serious public health issues facing youths in the United States. Every year, underage drinking undermines the well-being of America’s youths, causing a wide range of costly health and social problems.", "spotlight")
+  +reportlisting("Key Substance Use and Mental Health Indicators in the United States: Results from the 2015 National Survey on Drug Use and Health", "Populations Survey Branch", "2015", "September 2016", "2", "This national report summarizes key findings from the 2015 National Survey on Drug Use and Health for indicators of substance use and mental health among people aged 12 years old or older in the civilian, noninstitutionalized population of the United States.", "annualreport")

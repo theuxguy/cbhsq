@@ -1,0 +1,49 @@
+include ../layouts/global/mixins
+h3.mobile Refine Your Results
+  a( onclick="toggle_visibility('refine-results');")
+    +fa('fa fa-filter fa-lg')
+div#refine-results    
+      
+  div.filter-group
+    div.filter-menu
+      h4 Survey Collection Date
+      a( onclick="toggle_visibility('date');")
+        +fa("fa fa-caret-down fa-lg")
+    div.filter#date
+      p  
+        i Select Date Range
+      p From: 
+        select
+          option 1999
+        |  To :
+        select
+          option 2017
+      
+  
+  div.filter-group
+    div.filter-menu
+      h4 Survey Type
+      a( onclick="toggle_visibility('surveytype');")
+        +fa("fa fa-caret-down fa-lg")
+    div.filter#surveytype
+      +checkbox(['Client-Level Data', 'Emergency Department Data', 'Mental Health Facility - Treatment Data', 'Population Data', 'Substance Abuse Facility Data', 'Non-SAMHSA Data Set', 'Other SAMHSA Data Set', 'Nationwide Emergency Department Sample'])
+
+  div.filter-group
+    div.filter-menu
+      h4 Report Type
+      a( onclick="toggle_visibility('reporttype');")
+        +fa("fa fa-caret-down fa-lg")
+    div.filter#reporttype
+      +checkbox(['Annual Report', 'Data Review or Analytical Report', 'Data Table', 'Metro Report', 'Short Report', 'Spotlight', 'Barometer', 'State Report', 'Substate Report'])
+
+  div.filter-group
+    div.filter-menu
+      h4 Archive Reports
+      a( onclick="toggle_visibility('archive');")
+        +fa("fa fa-caret-down fa-lg")
+    div.filter#archive
+      p View Archive: On 
+        +fa("fas fa-toggle-on")
+
+
+  p.devnote See Specfications for design and functionality of multi-level filters

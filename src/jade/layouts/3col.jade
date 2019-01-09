@@ -1,0 +1,30 @@
+block config
+  - var pageTitle = 'CBHSQ Prototype'
+  - var bodyClass = 'index'
+  - var breadcrumb = ''
+doctype 
+html
+  head
+    title #{pageTitle}
+    include global/head
+  body(class='#{bodyClass}')
+    include global/header
+    block breadcrumb
+      div.breadcrumb
+        - var n = 0;
+        each val in ['Home']
+          a(href="home.html")= val
+          i(class="fa fa-angle-right" aria-hidden="true")
+          | #{breadcrumb} 
+    div.wrapcol
+      div.sidebarleft
+        block sidebarleft
+          h2 I'm a sidebar
+      div.articlecol
+        block main
+          h1 Hello World
+      div.sidebarright
+        block sidebarright
+          h2 I'm a sidebar2
+    include global/slimfooter
+    include global/footer

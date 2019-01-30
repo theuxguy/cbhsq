@@ -1,0 +1,68 @@
+extends layouts/2col
+
+block sections
+  - var pageTitle = 'NSDUH search'
+  - var section1 = 'Filters'
+  - var section2 = 'Search Results'
+   
+  body.search
+    div.nsduh
+        div.section1=section1
+              .filters_set
+                +filters ("Survey Type",["NSDUH","DAWN","NHTTS"])
+                +filters ("Report Type",["Annual","Barometer","Data Table","Glossary"])
+                +filters ("Location",["Alabama","Alaska","California"])
+                +filters ("Topics",["Alcohol Misuse","Cocaine","Depression"])
+            
+        div.section2=section2  
+          div.row 
+             div.backbutton
+               a(href="#") Back
+             div.crumbs 
+               a(href="#") Data&nbsp;
+               a /&nbsp;
+               a(href="#") Search Results&nbsp;
+          
+          div.row       
+            div.row.sorting
+                 | Sort:  
+                 select
+                          option By popularity
+                          option Newest to Oldest
+                          option Oldest to Newest
+                          option From A-Z
+                          option From Z-A  
+            div.row.trim
+                   | View 
+                   select 
+                       option 10
+                       option 20
+                       option 50
+                       option 100
+                     | &nbsp;of 171 results
+                     
+          div.row
+              .pilltext Applied Filters:
+              .pillset
+                +pills('Report Type: Annual Report')
+                +pills('Publisher: NSDUH')
+                +pills('Collection Date: 2009-2014')
+                
+                        
+             
+              
+mixin filters (name, items)
+  div#accordion.panel-group
+    .panel.panel-default
+      .panel-heading
+          a.accordion-toggle(data-toggle='collapse', href='#collapseOne')=name
+              
+              div#collapseOne.panel-collapse.collapse.in.panel-body
+                    for item in items
+                      div.itemcheck 
+                          input(type="checkbox") 
+                          h4= item 
+mixin pills(name)
+     a.pill(href="#")=name+'  X'
+ 
+  

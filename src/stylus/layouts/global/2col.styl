@@ -1,0 +1,35 @@
+div.nsduh
+    display flex
+    margin-top 2em
+    font-weight: bold;
+    @media(min-width: $md)
+      flex-direction: row
+      margin-left 5em
+      margin-top 2em
+      div.section1
+                   flex 1
+                   text-align: left;
+                   font-size: 1em;
+      div.section2
+                   flex 3
+                   text-align: left;
+                   font-size: 1.4em;
+                   margin-left: 6em;
+
+    @media(max-width: $md)
+     flex-direction column
+     margin-left 2em
+     margin-top 2em
+     div.section1
+                 flex 1
+                 text-align: left;
+                 font-size: 1.2em;
+                 margin-top: 1em;
+                 margin-right: 2em;
+
+      div.section2
+                 flex 3
+                 text-align: left;
+                 font-size: 1.2em;
+                 margin-top: 2em;
+                 margin-right: 2em;

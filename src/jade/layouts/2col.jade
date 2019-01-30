@@ -1,0 +1,26 @@
+block config
+  - var pageTitle = 'NSDUH Search'
+  
+doctype 
+html
+  head
+    title #{pageTitle}
+    include global/head
+    script(src='/js/search.js') 
+    body(class='#{bodyClass}')
+      include global/header
+      
+    block sections
+        - var pageTitle = 'pageTitle'
+        - var bodyClass = 'bodyClass'
+        - var section1 = 'section1'
+        - var section2 = 'section2' 
+      
+      div.nsduh   
+          div.section1
+          
+          div.section2  
+          
+                
+      
+             

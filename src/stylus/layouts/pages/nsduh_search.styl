@@ -1,0 +1,47 @@
+div.nsduh
+ div.section1
+      div.filters_set
+          font-size: 1em;
+          padding-top:1em;
+          padding-bottom: 1em;
+          font-weight: normal;
+          div#accordion.panel-group
+            div.panel.panel-default
+                  .panel-heading a.accordion-toggle:after {
+                          background-image: url('stuff/img/chevron-right-solid.svg');
+                          float: right;
+                          color: grey;
+                        }
+                  .panel-heading a.accordion-toggle.collapsed:after {
+                          background-image: url('stuff/img/chevron-right-solid.svg');
+                        }
+
+  div.section2
+    div.row
+        font-size: .6em;
+        margin-top: 1em;
+        margin-left: 0em;
+        font-weight: normal;
+        div.crumbs
+           margin-left: 2em;
+
+    div.row.sorting, .row.trim
+      @media(min-width: $lg)
+        font-size: 1em;
+        margin-right: 3em;
+      @media(max-width:$lg)
+       flex-direction: column;
+       font-size: 1em;
+       padding: 2em;
+
+    div.row
+        display Flex
+        flex-direction: row;
+       a.pill
+          margin-left: 1em
+          margin-right: 1em;
+          padding: 3px 5px 3px 5px;
+          border-radius: 5px;
+          background-color: #278;
+          color: white;
+          font-size: .6em;

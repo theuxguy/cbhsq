@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html> 
+  <title>DASIS Tables</title>
+  <meta charset="utf-8">
+  <meta name="viewport" condition="initial-scale=1">
+  <script src="https://use.fontawesome.com/330eaf7969.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"> </script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="stuff/foo.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+  <link rel="stylesheet" href="stuff/styles.css">
+  <body></body>
+  <div class="frame">
+    <div class="container">
+      <div class="banner">
+        <h2 class="table_title">Substance Use Treatment Admissions by Primary Substance of Use</h2>
+        <h4 class="tag">According to Sex, Age Group, Race, and Ethnicity among admissions aged 12 and older: Maryland,2016 </h4>
+      </div><a href="/datasets.html" class="back">< Back</a>
+      <div class="alter_table_section">
+        <div class="refresh_table">
+          <div class="alter_opt">
+            <div class="alter_label">US/State:</div>
+            <select class="alter_dropdown"> 
+              <option>United States</option>
+              <option>Maryland</option>
+              <option>Virginia</option>
+              <option>Washington DC</option>
+            </select>
+          </div>
+          <div class="alter_opt">
+            <div class="alter_label">Year: </div>
+            <select class="alter_dropdown"> 
+              <option>2019</option>
+              <option>2018</option>
+              <option>2017</option>
+            </select>
+          </div>
+          <div class="alter_opt">
+            <div class="alter_label">Type:</div>
+            <select class="alter_dropdown">
+              <option>Admissions</option>
+              <option>Discharges</option>
+            </select>
+          </div>
+        </div>
+        <div class="view_by">
+          <div class="alter_opt">
+            <div class="alter_label">View By:</div>
+            <select class="alter_dropdown">
+              <option>Gender</option>
+              <option>Race</option>
+              <option>Age</option>
+            </select>
+            <button class="refresh">Update Table<a class="buttonlink"></a></button>
+          </div>
+        </div>
+      </div>
+      <div class="scroller">     
+        <embed src="https://wwwdasis.samhsa.gov/webt/state_data/US17.pdf" type="application/pdf" class="pdfview">
+      </div>
+      <div class="sidepane">
+        <div class="docs">Data Documents
+          <div class="doc">
+            <div class="far fa-file-pdf"></div><a href="" class="docname">Data Admissions Availability Document</a>
+          </div>
+          <div class="doc">
+            <div class="far fa-file-pdf"> </div><a href="" class="docname">Data Discharges Availability Document</a>
+          </div>
+          <div class="doc">
+            <div class="far fa-file-pdf">   </div><a href="" class="docname">Data Definition Document</a>
+          </div>
+        </div>
+        <div class="docs">Other Data Sets
+          <div class="doc">
+            <div class="fas fa-table"></div><a href="" class="docname">Data Admissions Availability Document</a>
+          </div>
+          <div class="doc">
+            <div class="fas fa-table"> </div><a href="" class="docname">Data Discharges Availability Document</a>
+          </div>
+          <div class="doc">
+            <div class="fas fa-table"> </div><a href="" class="docname">Data Definition Document</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--             
+    div.bells
+         
+      div.pagination
+        a(href="#") &laquo;
+        a(href="#" class="active") 1
+        a(href="#") 2
+        a(href="#") 3
+        a(href="#") 4
+        a(href="#") 5
+        a(href="#") &raquo; 
+        
+      .showentries Showing 10 of 150 entries          
+          
+    -->
+  </div>
+</html>
